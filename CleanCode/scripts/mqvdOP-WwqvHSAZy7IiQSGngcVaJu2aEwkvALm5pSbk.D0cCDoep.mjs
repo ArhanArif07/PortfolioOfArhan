@@ -1,0 +1,764 @@
+import { t as e } from "./rolldown-runtime.DsXBSD_B.mjs";
+import {
+  F as t,
+  M as n,
+  T as r,
+  _ as i,
+  b as a,
+  c as ee,
+  j as o,
+  k as te,
+  l as s,
+  s as c,
+  u as l,
+} from "./react.CUuwdGgG.mjs";
+import { C as u, a as ne, r as re, t as ie } from "./motion.yFoJz7cr.mjs";
+import {
+  B as d,
+  Ct as ae,
+  H as oe,
+  M as se,
+  O as f,
+  P as p,
+  T as m,
+  Tt as h,
+  V as g,
+  _t as ce,
+  a as _,
+  b as le,
+  d as v,
+  ft as y,
+  gt as ue,
+  i as b,
+  lt as de,
+  n as fe,
+  ot as pe,
+  p as x,
+  q as S,
+  tt as me,
+  ut as he,
+  w as ge,
+  x as C,
+  xt as _e,
+  yt as w,
+} from "./framer.uWP7Qtvw.mjs";
+import { i as T, n as E, r as ve, t as ye } from "./sPvC_pCwb.Ggz8zae4.mjs";
+import { n as be, t as D } from "./aAuC7HDti.CWi1sD2t.mjs";
+import { i as xe, n as Se, r as Ce, t as we } from "./QQizO8D2m.BmdOiDZq.mjs";
+import { n as O, t as Te } from "./rT9J4IUgU.DCHrHZY6.mjs";
+import { i as Ee, n as De } from "./d0w_cWzte.DTqfl2e2.mjs";
+import { n as Oe, t as k } from "./SmoothScroll_Prod.Ux-EqKSq.mjs";
+import { n as ke, r as Ae } from "./FJYgKm7Yp.VNT_vxXP.mjs";
+var A,
+  j,
+  je,
+  M,
+  N,
+  P,
+  F,
+  I,
+  L,
+  R,
+  z,
+  B,
+  V,
+  H,
+  U,
+  W,
+  G,
+  K,
+  q,
+  J,
+  Y,
+  X,
+  Z,
+  Me,
+  Q,
+  Ne,
+  Pe,
+  $,
+  Fe,
+  Ie;
+e(() => {
+  (c(),
+    S(),
+    ie(),
+    r(),
+    Oe(),
+    be(),
+    Te(),
+    Ee(),
+    xe(),
+    T(),
+    ke(),
+    (A = d(k)),
+    (j = h(x)),
+    (je = d(D)),
+    (M = h(_)),
+    (N = h(m)),
+    (P = d(O)),
+    (F = h(u.div)),
+    (I = {
+      aryDL5pZQ: `(min-width: 1200px)`,
+      fMczMjrC3: `(max-width: 809.98px)`,
+      QH7pYIB1Q: `(min-width: 810px) and (max-width: 1199.98px)`,
+    }),
+    (L = [`z-index-2`]),
+    (R = `framer-I7Zdg`),
+    (z = {
+      aryDL5pZQ: `framer-v-vfry7m`,
+      fMczMjrC3: `framer-v-3dtzog`,
+      QH7pYIB1Q: `framer-v-hkzzum`,
+    }),
+    (B = (e, t, n) => (e && t ? `position` : n)),
+    (V = {
+      opacity: 1,
+      rotate: 0,
+      rotateX: 0,
+      rotateY: 0,
+      scale: 1.5,
+      skewX: 0,
+      skewY: 0,
+      x: 0,
+      y: 0,
+    }),
+    (H = { damping: 150, delay: 0, mass: 1, stiffness: 500, type: `spring` }),
+    (U = {
+      opacity: 0,
+      rotate: 0,
+      rotateX: 0,
+      rotateY: 0,
+      scale: 1,
+      skewX: 0,
+      skewY: 0,
+      x: 0,
+      y: 0,
+    }),
+    (W = { damping: 150, delay: 0.4, mass: 1, stiffness: 500, type: `spring` }),
+    (G = {
+      effect: {
+        filter: `blur(10px)`,
+        opacity: 0.001,
+        rotate: 0,
+        scale: 1,
+        skewX: 0,
+        skewY: 0,
+        x: 0,
+        y: 60,
+      },
+      repeat: !1,
+      startDelay: 0.8,
+      tokenization: `line`,
+      transition: {
+        damping: 150,
+        delay: 0.05,
+        mass: 1,
+        stiffness: 500,
+        type: `spring`,
+      },
+      trigger: `onMount`,
+      type: `appear`,
+    }),
+    (K = {
+      opacity: 0,
+      rotate: 0,
+      rotateX: 0,
+      rotateY: 0,
+      scale: 1,
+      skewX: 0,
+      skewY: 0,
+      x: 0,
+      y: 40,
+    }),
+    (q = { damping: 150, delay: 1.2, mass: 1, stiffness: 500, type: `spring` }),
+    (J = {
+      opacity: 0,
+      rotate: 0,
+      rotateX: 0,
+      rotateY: 0,
+      scale: 1,
+      skewX: 0,
+      skewY: 0,
+      x: 0,
+      y: 100,
+    }),
+    (Y = (e) =>
+      typeof e == `object` && e && typeof e.src == `string`
+        ? e
+        : typeof e == `string`
+          ? { src: e }
+          : void 0),
+    (X = (...e) => {
+      for (let t of e) if (t && typeof t == `string`) return t;
+    }),
+    (Z = () => ({
+      from: { alias: `T0Iid5WB4`, data: De, type: `Collection` },
+      select: [
+        { collection: `T0Iid5WB4`, name: `lT8fJrlE3`, type: `Identifier` },
+        { collection: `T0Iid5WB4`, name: `QE0E6Gpht`, type: `Identifier` },
+        { collection: `T0Iid5WB4`, name: `qP5afZE0B`, type: `Identifier` },
+        { collection: `T0Iid5WB4`, name: `SZLJAKHWh`, type: `Identifier` },
+        { collection: `T0Iid5WB4`, name: `L6q2o4xpI`, type: `Identifier` },
+        { collection: `T0Iid5WB4`, name: `id`, type: `Identifier` },
+      ],
+    })),
+    (Me = ({ query: e, pageSize: t, children: n }) => n(w(e))),
+    (Q = { Desktop: `aryDL5pZQ`, Phone: `fMczMjrC3`, Tablet: `QH7pYIB1Q` }),
+    (Ne = ({ value: e }) =>
+      y()
+        ? null
+        : s(`style`, {
+            dangerouslySetInnerHTML: { __html: e },
+            "data-framer-html-style": ``,
+          })),
+    (Pe = ({ height: e, id: t, width: n, ...r }) => ({
+      ...r,
+      variant: Q[r.variant] ?? r.variant ?? `aryDL5pZQ`,
+    })),
+    ($ = ae(
+      i(function (e, r) {
+        let i = te(null),
+          c = r ?? i,
+          ie = a(),
+          { activeLocale: d, setLocale: ae } = ue(),
+          f = pe(),
+          { style: p, className: h, layoutId: g, variant: y, ...x } = Pe(e);
+        ce(n(() => Ae({}, d), [d]));
+        let [S, me] = he(y, I, !1),
+          w = se(R, we, ye),
+          T = o(v)?.isLayoutTemplate,
+          E = B(T, !!o(ne)?.transition?.layout);
+        return (
+          _e(),
+          de({}),
+          s(v.Provider, {
+            value: {
+              activeVariantId: S,
+              humanReadableVariantMap: Q,
+              primaryVariantId: `aryDL5pZQ`,
+              variantClassNames: z,
+            },
+            children: l(re, {
+              id: g ?? ie,
+              children: [
+                s(Ne, {
+                  value: `html body { background: var(--token-962dbf23-cea4-4b3f-b44d-d5595ab68b22, rgb(255, 255, 255)); }`,
+                }),
+                l(u.div, {
+                  ...x,
+                  className: se(w, `framer-vfry7m`, h),
+                  ref: c,
+                  style: { ...p },
+                  children: [
+                    s(b, {
+                      children: s(_, {
+                        className: `framer-swqo3l-container`,
+                        isAuthoredByUser: !0,
+                        isModuleExternal: !0,
+                        layout: E,
+                        nodeId: `aUlVLV1Ja`,
+                        scopeId: `FJYgKm7Yp`,
+                        children: s(k, {
+                          height: `100%`,
+                          id: `aUlVLV1Ja`,
+                          intensity: 20,
+                          layoutId: `aUlVLV1Ja`,
+                          width: `100%`,
+                        }),
+                      }),
+                    }),
+                    l(u.section, {
+                      className: `framer-6gyhe6`,
+                      "data-framer-name": `Hero`,
+                      layout: E,
+                      children: [
+                        s(`div`, {
+                          className: `framer-143lqdu`,
+                          "data-framer-name": `Image-box`,
+                          children: s(j, {
+                            __framer__animate: { transition: H },
+                            __framer__animateOnce: !0,
+                            __framer__enter: V,
+                            __framer__styleAppearEffectEnabled: !0,
+                            __framer__threshold: 0,
+                            __perspectiveFX: !1,
+                            __targetOpacity: 1,
+                            background: {
+                              alt: `bg`,
+                              fit: `fill`,
+                              intrinsicHeight: 1100,
+                              intrinsicWidth: 2860,
+                              loading: oe((f?.y || 0) + 0 + 200 + 5 + 0),
+                              pixelHeight: 1100,
+                              pixelWidth: 2860,
+                              sizes: `calc(${f?.width || `100vw`} - 10px)`,
+                              src: `https://framerusercontent.com/images/KcGwExFFOXch4gMrEYCf3YEtiqA.png?width=2860&height=1100`,
+                              srcSet: `https://framerusercontent.com/images/KcGwExFFOXch4gMrEYCf3YEtiqA.png?scale-down-to=512&width=2860&height=1100 512w,https://framerusercontent.com/images/KcGwExFFOXch4gMrEYCf3YEtiqA.png?scale-down-to=1024&width=2860&height=1100 1024w,https://framerusercontent.com/images/KcGwExFFOXch4gMrEYCf3YEtiqA.png?scale-down-to=2048&width=2860&height=1100 2048w,https://framerusercontent.com/images/KcGwExFFOXch4gMrEYCf3YEtiqA.png?width=2860&height=1100 2860w`,
+                            },
+                            className: `framer-1b30kdh`,
+                            "data-framer-name": `Background-image`,
+                          }),
+                        }),
+                        s(`div`, {
+                          className: `framer-nod2wc`,
+                          "data-framer-name": `Container`,
+                          children: l(`div`, {
+                            className: `framer-1n85ysf`,
+                            "data-framer-name": `Header`,
+                            children: [
+                              s(`div`, {
+                                className: `framer-114snrf`,
+                                "data-framer-name": `Label-box`,
+                                children: s(C, {
+                                  breakpoint: S,
+                                  overrides: {
+                                    fMczMjrC3: {
+                                      width: `max(max(min(max(${f?.width || `100vw`} - 10px, 1px), 1440px) - 32px, 1px) / 4, 50px)`,
+                                    },
+                                    QH7pYIB1Q: {
+                                      width: `max(max(min(max(${f?.width || `100vw`} - 10px, 1px), 1440px) - 32px, 1px) / 4, 50px)`,
+                                    },
+                                  },
+                                  children: s(b, {
+                                    height: 20,
+                                    width: `max(max(min(max(${f?.width || `100vw`} - 10px, 1px), 1440px) - 40px, 1px) / 4, 50px)`,
+                                    y:
+                                      (f?.y || 0) +
+                                      0 +
+                                      200 +
+                                      5 +
+                                      157.4 +
+                                      0 +
+                                      0 +
+                                      0 +
+                                      0 +
+                                      0 +
+                                      0,
+                                    children: s(M, {
+                                      __framer__animate: { transition: W },
+                                      __framer__animateOnce: !0,
+                                      __framer__enter: U,
+                                      __framer__styleAppearEffectEnabled: !0,
+                                      __framer__threshold: 0,
+                                      __perspectiveFX: !1,
+                                      __targetOpacity: 1,
+                                      className: `framer-9w52po-container`,
+                                      nodeId: `nxXUhBvC9`,
+                                      rendersWithMotion: !0,
+                                      scopeId: `FJYgKm7Yp`,
+                                      children: s(D, {
+                                        GZXD4XDjD: `var(--token-962dbf23-cea4-4b3f-b44d-d5595ab68b22, rgb(255, 255, 255))`,
+                                        height: `100%`,
+                                        id: `nxXUhBvC9`,
+                                        layoutId: `nxXUhBvC9`,
+                                        t9Ips89AM: `var(--token-06856072-b723-433b-af66-5e2af035f2ef, rgb(255, 33, 33))`,
+                                        width: `100%`,
+                                        wYgOcdV21: `projects`,
+                                      }),
+                                    }),
+                                  }),
+                                }),
+                              }),
+                              l(`div`, {
+                                className: `framer-yd74sg`,
+                                "data-framer-name": `Heading`,
+                                children: [
+                                  s(m, {
+                                    __fromCanvasComponent: !0,
+                                    children: s(t, {
+                                      children: l(`h2`, {
+                                        className: `framer-styles-preset-w4n9ce`,
+                                        "data-styles-preset": `QQizO8D2m`,
+                                        dir: `auto`,
+                                        style: {
+                                          "--framer-text-color": `var(--token-962dbf23-cea4-4b3f-b44d-d5595ab68b22, rgb(255, 255, 255))`,
+                                        },
+                                        children: [
+                                          s(`span`, {
+                                            style: {
+                                              "--framer-text-color": `var(--token-06856072-b723-433b-af66-5e2af035f2ef, rgb(255, 33, 33))`,
+                                            },
+                                            children: `*`,
+                                          }),
+                                          `Projects That Inspire`,
+                                          s(`span`, {
+                                            style: {
+                                              "--framer-text-color": `var(--token-06856072-b723-433b-af66-5e2af035f2ef, rgb(255, 33, 33))`,
+                                            },
+                                            children: `*`,
+                                          }),
+                                        ],
+                                      }),
+                                    }),
+                                    className: `framer-1mkrxbo`,
+                                    effect: G,
+                                    fonts: [`Inter`],
+                                    verticalAlignment: `top`,
+                                    withExternalLayout: !0,
+                                  }),
+                                  s(N, {
+                                    __framer__animate: { transition: q },
+                                    __framer__animateOnce: !0,
+                                    __framer__enter: K,
+                                    __framer__styleAppearEffectEnabled: !0,
+                                    __framer__threshold: 0,
+                                    __fromCanvasComponent: !0,
+                                    __perspectiveFX: !1,
+                                    __targetOpacity: 1,
+                                    children: s(t, {
+                                      children: s(`p`, {
+                                        className: `framer-styles-preset-1mk8z8h`,
+                                        "data-styles-preset": `sPvC_pCwb`,
+                                        dir: `auto`,
+                                        children: `Explore the campaigns, designs, and strategies we’ve crafted for brands worldwide, turning ideas into measurable results and real growth.`,
+                                      }),
+                                    }),
+                                    className: `framer-11mv0du`,
+                                    fonts: [`Inter`],
+                                    verticalAlignment: `top`,
+                                    withExternalLayout: !0,
+                                  }),
+                                ],
+                              }),
+                            ],
+                          }),
+                        }),
+                        s(`div`, {
+                          className: `framer-1pjrw0s`,
+                          "data-framer-name": `Overlay`,
+                        }),
+                        s(`div`, {
+                          className: `framer-1r0wm1u`,
+                          "data-framer-name": `Overlay`,
+                        }),
+                      ],
+                    }),
+                    s(u.section, {
+                      className: `framer-2dzu45`,
+                      "data-framer-name": `Projects`,
+                      layout: E,
+                      children: s(`div`, {
+                        className: `framer-kqx3k0`,
+                        "data-framer-name": `Container`,
+                        children: s(F, {
+                          __framer__animate: { transition: H },
+                          __framer__animateOnce: !0,
+                          __framer__enter: J,
+                          __framer__styleAppearEffectEnabled: !0,
+                          __framer__threshold: 0,
+                          __perspectiveFX: !1,
+                          __targetOpacity: 1,
+                          className: `framer-1fly1rh`,
+                          children: s(fe, {
+                            children: s(Me, {
+                              query: Z(),
+                              children: (e, t, n) =>
+                                s(ee, {
+                                  children: e?.map(
+                                    (
+                                      {
+                                        id: e,
+                                        L6q2o4xpI: t,
+                                        lT8fJrlE3: n,
+                                        QE0E6Gpht: r,
+                                        qP5afZE0B: i,
+                                        SZLJAKHWh: a,
+                                      },
+                                      ee,
+                                    ) => (
+                                      (n ??= ``),
+                                      (i ??= ``),
+                                      (a ??= ``),
+                                      (t ??= ``),
+                                      s(
+                                        re,
+                                        {
+                                          id: `T0Iid5WB4-${e}`,
+                                          children: s(le.Provider, {
+                                            value: { L6q2o4xpI: t },
+                                            children: s(`div`, {
+                                              className: `framer-4gvraq`,
+                                              children: s(ge, {
+                                                links: [
+                                                  {
+                                                    href: {
+                                                      pathVariables: {
+                                                        L6q2o4xpI: t,
+                                                      },
+                                                      webPageId: `J6Q1AMwXS`,
+                                                    },
+                                                    implicitPathVariables:
+                                                      void 0,
+                                                  },
+                                                  {
+                                                    href: {
+                                                      pathVariables: {
+                                                        L6q2o4xpI: t,
+                                                      },
+                                                      webPageId: `J6Q1AMwXS`,
+                                                    },
+                                                    implicitPathVariables:
+                                                      void 0,
+                                                  },
+                                                  {
+                                                    href: {
+                                                      pathVariables: {
+                                                        L6q2o4xpI: t,
+                                                      },
+                                                      webPageId: `J6Q1AMwXS`,
+                                                    },
+                                                    implicitPathVariables:
+                                                      void 0,
+                                                  },
+                                                ],
+                                                children: (e) =>
+                                                  s(C, {
+                                                    breakpoint: S,
+                                                    overrides: {
+                                                      fMczMjrC3: {
+                                                        width: `max(min(${f?.width || `100vw`} - 32px, 1440px), 1px)`,
+                                                        y:
+                                                          (f?.y || 0) +
+                                                          0 +
+                                                          750 +
+                                                          120 +
+                                                          0 +
+                                                          0 +
+                                                          0 +
+                                                          0 +
+                                                          3780 +
+                                                          0,
+                                                      },
+                                                      QH7pYIB1Q: {
+                                                        width: `max(max((min(max(${f?.width || `100vw`} - 32px, 1px), 1440px) - 15px) / 2, 50px), 1px)`,
+                                                      },
+                                                    },
+                                                    children: s(b, {
+                                                      height: 500,
+                                                      width: `max(max((min(max(${f?.width || `100vw`} - 40px, 1px), 1440px) - 15px) / 2, 50px), 1px)`,
+                                                      y:
+                                                        (f?.y || 0) +
+                                                        0 +
+                                                        750 +
+                                                        120 +
+                                                        0 +
+                                                        0 +
+                                                        0 +
+                                                        0 +
+                                                        0,
+                                                      children: s(_, {
+                                                        className: `framer-mnldsw-container`,
+                                                        nodeId: `JR5P_LzN4`,
+                                                        scopeId: `FJYgKm7Yp`,
+                                                        children: s(C, {
+                                                          breakpoint: S,
+                                                          overrides: {
+                                                            fMczMjrC3: {
+                                                              nKHvk1MWe: e[2],
+                                                              variant:
+                                                                X(`wC29Qre_W`),
+                                                            },
+                                                            QH7pYIB1Q: {
+                                                              nKHvk1MWe: e[1],
+                                                              variant:
+                                                                X(`wC29Qre_W`),
+                                                            },
+                                                          },
+                                                          children: s(O, {
+                                                            CmrOHUsjD: n,
+                                                            height: `100%`,
+                                                            id: `JR5P_LzN4`,
+                                                            layoutId: `JR5P_LzN4`,
+                                                            nKHvk1MWe: e[0],
+                                                            p1EeNJXxM: Y(r),
+                                                            SpJPq0bPr: i,
+                                                            style: {
+                                                              width: `100%`,
+                                                            },
+                                                            uzVf1SOPg: a,
+                                                            variant:
+                                                              X(`rsTDW_85I`),
+                                                            width: `100%`,
+                                                          }),
+                                                        }),
+                                                      }),
+                                                    }),
+                                                  }),
+                                              }),
+                                            }),
+                                          }),
+                                        },
+                                        e,
+                                      )
+                                    ),
+                                  ),
+                                }),
+                            }),
+                          }),
+                        }),
+                      }),
+                    }),
+                  ],
+                }),
+                s(`div`, { id: `overlay` }),
+              ],
+            }),
+          })
+        );
+      }),
+      [
+        `@supports (aspect-ratio: 1) { body { --framer-aspect-ratio-supported: auto; } }`,
+        `.framer-I7Zdg.framer-ewtl7p, .framer-I7Zdg .framer-ewtl7p { display: block; }`,
+        `.framer-I7Zdg.framer-vfry7m { align-content: center; align-items: center; background-color: var(--token-962dbf23-cea4-4b3f-b44d-d5595ab68b22, #ffffff); display: flex; flex-direction: column; flex-wrap: nowrap; gap: 0px; height: 1000px; justify-content: flex-start; overflow: var(--overflow-clip-fallback, clip); padding: 0px; position: relative; width: 1200px; }`,
+        `.framer-I7Zdg .framer-swqo3l-container { flex: none; height: auto; position: relative; width: auto; z-index: 1; }`,
+        `.framer-I7Zdg .framer-6gyhe6 { align-content: flex-end; align-items: flex-end; display: flex; flex: none; flex-direction: row; flex-wrap: nowrap; gap: 10px; height: min-content; justify-content: center; min-height: 550px; overflow: hidden; padding: 5px; position: relative; width: 100%; z-index: 2; }`,
+        `.framer-I7Zdg .framer-143lqdu { align-content: center; align-items: center; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px; border-top-left-radius: 20px; border-top-right-radius: 20px; bottom: 5px; display: flex; flex: none; flex-direction: row; flex-wrap: nowrap; gap: 0px; justify-content: center; left: 5px; overflow: hidden; padding: 0px; position: absolute; right: 5px; top: 5px; will-change: var(--framer-will-change-override, transform); }`,
+        `.framer-I7Zdg .framer-1b30kdh { border-bottom-left-radius: 20px; border-bottom-right-radius: 20px; border-top-left-radius: 20px; border-top-right-radius: 20px; bottom: 0px; flex: none; left: 0px; overflow: var(--overflow-clip-fallback, clip); position: absolute; right: 0px; top: 0px; will-change: var(--framer-will-change-override, transform); z-index: 1; }`,
+        `.framer-I7Zdg .framer-nod2wc { align-content: flex-end; align-items: flex-end; display: flex; flex: 1 0 0px; flex-direction: row; flex-wrap: nowrap; gap: 10px; height: min-content; justify-content: center; max-width: 1440px; overflow: visible; padding: 0px 20px 60px 20px; position: relative; width: 1px; z-index: 2; }`,
+        `.framer-I7Zdg .framer-1n85ysf { align-content: center; align-items: center; display: flex; flex: 1 0 0px; flex-direction: column; flex-wrap: nowrap; gap: 113px; height: min-content; justify-content: center; overflow: visible; padding: 0px; position: relative; width: 1px; }`,
+        `.framer-I7Zdg .framer-114snrf { display: grid; flex: none; gap: 0px; grid-auto-rows: min-content; grid-template-columns: repeat(4, minmax(50px, 1fr)); grid-template-rows: repeat(1, min-content); height: min-content; justify-content: center; overflow: visible; padding: 0px; position: relative; width: 100%; }`,
+        `.framer-I7Zdg .framer-9w52po-container { align-self: start; flex: none; height: auto; justify-self: start; position: relative; width: 100%; }`,
+        `.framer-I7Zdg .framer-yd74sg { align-content: flex-start; align-items: flex-start; display: flex; flex: none; flex-direction: column; flex-wrap: nowrap; gap: 20px; height: min-content; justify-content: flex-start; overflow: visible; padding: 0px; position: relative; width: 100%; }`,
+        `.framer-I7Zdg .framer-1mkrxbo, .framer-I7Zdg .framer-11mv0du { --framer-link-text-color: #0099ff; --framer-link-text-decoration: underline; flex: none; height: auto; max-width: 563px; position: relative; white-space: pre-wrap; width: 100%; word-break: break-word; word-wrap: break-word; }`,
+        `.framer-I7Zdg .framer-1pjrw0s, .framer-I7Zdg .framer-1r0wm1u { background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%); border-bottom-left-radius: 20px; border-bottom-right-radius: 20px; bottom: 5px; flex: none; height: 189px; left: 5px; overflow: var(--overflow-clip-fallback, clip); position: absolute; right: 5px; will-change: var(--framer-will-change-override, transform); z-index: 1; }`,
+        `.framer-I7Zdg .framer-2dzu45 { align-content: center; align-items: center; display: flex; flex: none; flex-direction: row; flex-wrap: nowrap; gap: 10px; height: min-content; justify-content: center; overflow: var(--overflow-clip-fallback, clip); padding: 120px 20px 120px 20px; position: relative; width: 100%; z-index: 2; }`,
+        `.framer-I7Zdg .framer-kqx3k0 { align-content: center; align-items: center; display: flex; flex: 1 0 0px; flex-direction: column; flex-wrap: nowrap; gap: 60px; height: min-content; justify-content: center; max-width: 1440px; overflow: visible; padding: 0px; position: relative; width: 1px; z-index: 1; }`,
+        `.framer-I7Zdg .framer-1fly1rh { display: grid; flex: none; gap: 60px 15px; grid-auto-rows: min-content; grid-template-columns: repeat(2, minmax(50px, 1fr)); height: min-content; justify-content: center; padding: 0px; position: relative; width: 100%; }`,
+        `.framer-I7Zdg .framer-4gvraq { align-content: center; align-items: center; align-self: start; display: flex; flex: none; flex-direction: row; flex-wrap: nowrap; gap: 10px; height: min-content; justify-content: flex-start; justify-self: start; padding: 0px; position: relative; width: 100%; }`,
+        `.framer-I7Zdg .framer-mnldsw-container { flex: 1 0 0px; height: auto; position: relative; width: 1px; }`,
+        ...Se,
+        ...E,
+        `@media (min-width: 810px) and (max-width: 1199.98px) { .framer-I7Zdg.framer-vfry7m { width: 810px; } .framer-I7Zdg .framer-nod2wc { padding: 0px 16px 60px 16px; } .framer-I7Zdg .framer-1mkrxbo { max-width: 497px; } .framer-I7Zdg .framer-2dzu45 { padding: 120px 16px 120px 16px; } .framer-I7Zdg .framer-1fly1rh { gap: 40px 15px; }}`,
+        `@media (max-width: 809.98px) { .framer-I7Zdg.framer-vfry7m { width: 390px; } .framer-I7Zdg .framer-nod2wc { padding: 0px 16px 60px 16px; } .framer-I7Zdg .framer-1mkrxbo { max-width: 297px; } .framer-I7Zdg .framer-2dzu45 { flex-direction: column; padding: 120px 16px 120px 16px; } .framer-I7Zdg .framer-kqx3k0 { flex: none; gap: 40px; width: 100%; } .framer-I7Zdg .framer-1fly1rh { align-content: flex-start; align-items: flex-start; display: flex; flex-direction: column; flex-wrap: nowrap; gap: 40px 15px; } .framer-I7Zdg .framer-4gvraq { align-self: unset; }}`,
+      ],
+      `framer-I7Zdg`,
+    )),
+    (Fe = $),
+    ($.displayName = `Home`),
+    ($.defaultProps = { height: 3999, width: 1200 }),
+    f(
+      $,
+      [
+        {
+          explicitInter: !0,
+          fonts: [
+            {
+              cssFamilyName: `Inter`,
+              source: `framer`,
+              style: `normal`,
+              uiFamilyName: `Inter`,
+              unicodeRange: `U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F`,
+              url: `https://framerusercontent.com/assets/5vvr9Vy74if2I6bQbJvbw7SY1pQ.woff2`,
+              weight: `400`,
+            },
+            {
+              cssFamilyName: `Inter`,
+              source: `framer`,
+              style: `normal`,
+              uiFamilyName: `Inter`,
+              unicodeRange: `U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116`,
+              url: `https://framerusercontent.com/assets/EOr0mi4hNtlgWNn9if640EZzXCo.woff2`,
+              weight: `400`,
+            },
+            {
+              cssFamilyName: `Inter`,
+              source: `framer`,
+              style: `normal`,
+              uiFamilyName: `Inter`,
+              unicodeRange: `U+1F00-1FFF`,
+              url: `https://framerusercontent.com/assets/Y9k9QrlZAqio88Klkmbd8VoMQc.woff2`,
+              weight: `400`,
+            },
+            {
+              cssFamilyName: `Inter`,
+              source: `framer`,
+              style: `normal`,
+              uiFamilyName: `Inter`,
+              unicodeRange: `U+0370-03FF`,
+              url: `https://framerusercontent.com/assets/OYrD2tBIBPvoJXiIHnLoOXnY9M.woff2`,
+              weight: `400`,
+            },
+            {
+              cssFamilyName: `Inter`,
+              source: `framer`,
+              style: `normal`,
+              uiFamilyName: `Inter`,
+              unicodeRange: `U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF`,
+              url: `https://framerusercontent.com/assets/JeYwfuaPfZHQhEG8U5gtPDZ7WQ.woff2`,
+              weight: `400`,
+            },
+            {
+              cssFamilyName: `Inter`,
+              source: `framer`,
+              style: `normal`,
+              uiFamilyName: `Inter`,
+              unicodeRange: `U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2070, U+2074-207E, U+2080-208E, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD`,
+              url: `https://framerusercontent.com/assets/GrgcKwrN6d3Uz8EwcLHZxwEfC4.woff2`,
+              weight: `400`,
+            },
+            {
+              cssFamilyName: `Inter`,
+              source: `framer`,
+              style: `normal`,
+              uiFamilyName: `Inter`,
+              unicodeRange: `U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB`,
+              url: `https://framerusercontent.com/assets/b6Y37FthZeALduNqHicBT6FutY.woff2`,
+              weight: `400`,
+            },
+          ],
+        },
+        ...A,
+        ...je,
+        ...P,
+        ...g(Ce),
+        ...g(ve),
+      ],
+      { supportsExplicitInterCodegen: !0 },
+    ),
+    ($.loader = {
+      load: (e, t) => {
+        let n = t.locale,
+          r = me.get(Z(), n);
+        return Promise.allSettled([
+          r.preload(),
+          p(D, {}, t),
+          (async () => {
+            let e = (await r.readMaybeAsync()) ?? [];
+            return Promise.allSettled(e.flatMap((e) => p(O, {}, t)));
+          })(),
+        ]);
+      },
+    }),
+    (Ie = {
+      exports: {
+        default: {
+          type: `reactComponent`,
+          name: `FramerFJYgKm7Yp`,
+          slots: [],
+          annotations: {
+            framerDisplayContentsDiv: `false`,
+            framerContractVersion: `1`,
+            framerAutoSizeImages: `true`,
+            framerCanvasComponentVariantDetails: `{"propertyName":"variant","data":{"default":{"layout":["fixed","fixed"]},"QH7pYIB1Q":{"layout":["fixed","fixed"]},"fMczMjrC3":{"layout":["fixed","fixed"]}}}`,
+            framerColorSyntax: `true`,
+            framerImmutableVariables: `true`,
+            framerScrollSections: `false`,
+            framerIntrinsicHeight: `3999`,
+            framerComponentViewportWidth: `true`,
+            framerIntrinsicWidth: `1200`,
+            framerResponsiveScreen: `true`,
+            framerAcceptsLayoutTemplate: `true`,
+            framerLayoutTemplateFlowEffect: `true`,
+          },
+        },
+        queryParamNames: {
+          type: `variable`,
+          annotations: { framerContractVersion: `1` },
+        },
+        Props: { type: `tsType`, annotations: { framerContractVersion: `1` } },
+        __FramerMetadata__: { type: `variable` },
+      },
+    }));
+})();
+export { Ie as __FramerMetadata__, Fe as default, L as queryParamNames };
+//# sourceMappingURL=mqvdOP-WwqvHSAZy7IiQSGngcVaJu2aEwkvALm5pSbk.D0cCDoep.mjs.map

@@ -1,0 +1,498 @@
+import { t as e } from "./rolldown-runtime.DsXBSD_B.mjs";
+import {
+  F as t,
+  M as n,
+  T as r,
+  _ as i,
+  b as a,
+  j as o,
+  k as ee,
+  l as s,
+  s as c,
+  u as l,
+} from "./react.CUuwdGgG.mjs";
+import { C as u, a as d, r as f, t as p } from "./motion.yFoJz7cr.mjs";
+import {
+  B as m,
+  Ct as h,
+  M as g,
+  O as _,
+  St as v,
+  T as y,
+  V as b,
+  g as x,
+  gt as S,
+  k as C,
+  o as w,
+  ot as T,
+  q as E,
+} from "./framer.uWP7Qtvw.mjs";
+import {
+  a as D,
+  c as O,
+  i as k,
+  o as A,
+  r as te,
+  s as j,
+} from "./shared-lib.Bm4MKTZG.mjs";
+function M(e, ...t) {
+  let n = {};
+  return (t?.forEach((t) => t && Object.assign(n, e[t])), n);
+}
+var N,
+  P,
+  F,
+  I,
+  L,
+  R,
+  z,
+  B,
+  V,
+  H,
+  U,
+  W,
+  G,
+  K,
+  q,
+  J = e(() => {
+    (c(),
+      E(),
+      p(),
+      r(),
+      O(),
+      A(),
+      (N = m(j)),
+      (P = { pBG7yIB13: { hover: !0 }, zphlO018I: { hover: !0 } }),
+      (F = [`zphlO018I`, `pBG7yIB13`]),
+      (I = `framer-HGRLy`),
+      (L = { pBG7yIB13: `framer-v-5ymrl2`, zphlO018I: `framer-v-ej88hq` }),
+      (R = {
+        delay: 0,
+        duration: 0.4,
+        ease: [0.44, 0, 0.56, 1],
+        type: `tween`,
+      }),
+      (z = (e, t) => `translate(-50%, -50%) ${t}`),
+      (B = (e, t) => `translateX(-50%) ${t}`),
+      (V = ({ value: e, children: t }) => {
+        let r = o(d),
+          i = e ?? r.transition,
+          a = n(() => ({ ...r, transition: i }), [JSON.stringify(i)]);
+        return s(d.Provider, { value: a, children: t });
+      }),
+      (H = { Default: `zphlO018I`, Reverse: `pBG7yIB13` }),
+      (U = u.create(t)),
+      (W = ({
+        arrowFill: e,
+        arrowOverlay: t,
+        fill: n,
+        height: r,
+        hoverArrowStroke: i,
+        hoverFill: a,
+        hoverTitleInvert: o,
+        id: ee,
+        link: s,
+        newTab: c,
+        smoothScroll: l,
+        title: u,
+        titleColor: d,
+        width: f,
+        ...p
+      }) => ({
+        ...p,
+        AN8wZ6h6b:
+          t ??
+          p.AN8wZ6h6b ??
+          `var(--token-962dbf23-cea4-4b3f-b44d-d5595ab68b22, rgb(255, 255, 255))`,
+        Cya6RuIUy: l ?? p.Cya6RuIUy,
+        evTCyulAI: s ?? p.evTCyulAI,
+        FRGXCszKE: u ?? p.FRGXCszKE ?? `Get Started`,
+        KS1OTpe12:
+          d ??
+          p.KS1OTpe12 ??
+          `var(--token-18c0a90f-4c91-40d5-87bc-96696572c777, rgb(0, 0, 0))`,
+        OubOSgTqz:
+          i ??
+          p.OubOSgTqz ??
+          `var(--token-18c0a90f-4c91-40d5-87bc-96696572c777, rgb(0, 0, 0))`,
+        qV_NmyJVp: c ?? p.qV_NmyJVp,
+        RnDkx60mf:
+          a ??
+          p.RnDkx60mf ??
+          `var(--token-18c0a90f-4c91-40d5-87bc-96696572c777, rgb(0, 0, 0))`,
+        s5zVGHZrm:
+          n ??
+          p.s5zVGHZrm ??
+          `var(--token-962dbf23-cea4-4b3f-b44d-d5595ab68b22, rgb(255, 255, 255))`,
+        variant: H[p.variant] ?? p.variant ?? `zphlO018I`,
+        VmYpdrASS:
+          e ??
+          p.VmYpdrASS ??
+          `var(--token-06856072-b723-433b-af66-5e2af035f2ef, rgb(255, 33, 33))`,
+        w1blkKoqs: o ?? p.w1blkKoqs ?? 100,
+      })),
+      (G = (e, t) =>
+        e.layoutDependency ? t.join(`-`) + e.layoutDependency : t.join(`-`)),
+      (K = h(
+        i(function (e, n) {
+          let r = ee(null),
+            i = n ?? r,
+            o = a(),
+            { activeLocale: c, setLocale: d } = S();
+          T();
+          let {
+              style: p,
+              className: m,
+              layoutId: h,
+              variant: _,
+              FRGXCszKE: b,
+              s5zVGHZrm: C,
+              KS1OTpe12: w,
+              w1blkKoqs: E,
+              RnDkx60mf: D,
+              VmYpdrASS: O,
+              AN8wZ6h6b: k,
+              OubOSgTqz: A,
+              evTCyulAI: N,
+              qV_NmyJVp: H,
+              Cya6RuIUy: K,
+              ...q
+            } = W(e),
+            {
+              baseVariant: J,
+              classNames: Y,
+              clearLoadingGesture: ne,
+              gestureHandlers: X,
+              gestureVariant: Z,
+              isLoading: re,
+              setGestureState: ie,
+              setVariant: ae,
+              variants: Q,
+            } = v({
+              cycleOrder: F,
+              defaultVariant: `zphlO018I`,
+              enabledGestures: P,
+              ref: i,
+              variant: _,
+              variantClassNames: L,
+            }),
+            $ = G(e, Q),
+            oe = g(I, te);
+          return s(f, {
+            id: h ?? o,
+            children: s(U, {
+              animate: Q,
+              initial: !1,
+              children: s(V, {
+                value: R,
+                children: s(x, {
+                  href: N,
+                  motionChild: !0,
+                  nodeId: `zphlO018I`,
+                  openInNewTab: H,
+                  scopeId: `V4XApcPH4`,
+                  smoothScroll: K,
+                  children: l(u.a, {
+                    ...q,
+                    ...X,
+                    className: `${g(oe, `framer-ej88hq`, m, Y)} framer-133jq9h`,
+                    "data-framer-name": `Default`,
+                    layoutDependency: $,
+                    layoutId: `zphlO018I`,
+                    ref: i,
+                    style: {
+                      backgroundColor: C,
+                      borderBottomLeftRadius: 5,
+                      borderBottomRightRadius: 5,
+                      borderTopLeftRadius: 5,
+                      borderTopRightRadius: 5,
+                      ...p,
+                    },
+                    variants: {
+                      "pBG7yIB13-hover": { backgroundColor: D },
+                      "zphlO018I-hover": { backgroundColor: D },
+                    },
+                    ...M(
+                      {
+                        "pBG7yIB13-hover": { "data-framer-name": void 0 },
+                        "zphlO018I-hover": { "data-framer-name": void 0 },
+                        pBG7yIB13: { "data-framer-name": `Reverse` },
+                      },
+                      J,
+                      Z,
+                    ),
+                    children: [
+                      s(y, {
+                        __fromCanvasComponent: !0,
+                        children: s(t, {
+                          children: s(u.p, {
+                            className: `framer-styles-preset-1tukh9k`,
+                            "data-styles-preset": `jDHitzL9y`,
+                            dir: `auto`,
+                            style: {
+                              "--framer-text-color": `var(--extracted-r6o4lv, var(--variable-reference-KS1OTpe12-V4XApcPH4))`,
+                            },
+                            children: `Get Started`,
+                          }),
+                        }),
+                        className: `framer-hg8c2v`,
+                        fonts: [`Inter`],
+                        layoutDependency: $,
+                        layoutId: `sbnwnPbHH`,
+                        style: {
+                          "--extracted-r6o4lv": `var(--variable-reference-KS1OTpe12-V4XApcPH4)`,
+                          "--framer-link-text-color": `rgb(0, 153, 255)`,
+                          "--framer-link-text-decoration": `underline`,
+                          "--variable-reference-KS1OTpe12-V4XApcPH4": w,
+                          filter: `none`,
+                          WebkitFilter: `none`,
+                        },
+                        text: b,
+                        variants: {
+                          "pBG7yIB13-hover": {
+                            filter: `invert(${parseFloat(E) / 100})`,
+                            WebkitFilter: `invert(${parseFloat(E) / 100})`,
+                          },
+                          "zphlO018I-hover": {
+                            filter: `invert(${parseFloat(E) / 100})`,
+                            WebkitFilter: `invert(${parseFloat(E) / 100})`,
+                          },
+                        },
+                        verticalAlignment: `top`,
+                        withExternalLayout: !0,
+                      }),
+                      l(u.div, {
+                        className: `framer-1at294g`,
+                        "data-framer-name": `Icon-box`,
+                        layoutDependency: $,
+                        layoutId: `ypk6qoZ4f`,
+                        style: {
+                          backgroundColor: O,
+                          borderBottomLeftRadius: 5,
+                          borderBottomRightRadius: 5,
+                          borderTopLeftRadius: 5,
+                          borderTopRightRadius: 5,
+                        },
+                        children: [
+                          s(u.div, {
+                            className: `framer-1w72qz8`,
+                            "data-framer-name": `Overlay`,
+                            layoutDependency: $,
+                            layoutId: `alCaW0mpa`,
+                            style: { backgroundColor: k },
+                          }),
+                          s(j, {
+                            animated: !0,
+                            className: `framer-1e5wxu`,
+                            layoutDependency: $,
+                            layoutId: `uVTi8BP7j`,
+                            style: {
+                              "--43q7um": `var(--token-962dbf23-cea4-4b3f-b44d-d5595ab68b22, rgb(255, 255, 255))`,
+                              rotate: 0,
+                            },
+                            transformTemplate: z,
+                            variants: {
+                              "zphlO018I-hover": { rotate: 0 },
+                              pBG7yIB13: { rotate: -180 },
+                            },
+                            ...M(
+                              {
+                                "pBG7yIB13-hover": { transformTemplate: B },
+                                "zphlO018I-hover": { transformTemplate: B },
+                              },
+                              J,
+                              Z,
+                            ),
+                          }),
+                          s(j, {
+                            animated: !0,
+                            className: `framer-gq0wdq`,
+                            layoutDependency: $,
+                            layoutId: `KyltdF8YK`,
+                            style: {
+                              "--43q7um": `var(--token-962dbf23-cea4-4b3f-b44d-d5595ab68b22, rgb(255, 255, 255))`,
+                              rotate: -45,
+                            },
+                            transformTemplate: B,
+                            variants: {
+                              "pBG7yIB13-hover": { "--43q7um": A },
+                              "zphlO018I-hover": { "--43q7um": A },
+                              pBG7yIB13: { rotate: -145 },
+                            },
+                            ...M(
+                              { "pBG7yIB13-hover": { transformTemplate: z } },
+                              J,
+                              Z,
+                            ),
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                }),
+              }),
+            }),
+          });
+        }),
+        [
+          `@supports (aspect-ratio: 1) { body { --framer-aspect-ratio-supported: auto; } }`,
+          `.framer-HGRLy.framer-133jq9h, .framer-HGRLy .framer-133jq9h { display: block; }`,
+          `.framer-HGRLy.framer-ej88hq { align-content: center; align-items: center; cursor: pointer; display: flex; flex-direction: row; flex-wrap: nowrap; gap: 16px; height: 46px; justify-content: center; overflow: hidden; padding: 5px 5px 5px 10px; position: relative; text-decoration: none; width: min-content; will-change: var(--framer-will-change-override, transform); }`,
+          `.framer-HGRLy .framer-hg8c2v { flex: none; height: auto; position: relative; white-space: pre; width: auto; z-index: 2; }`,
+          `.framer-HGRLy .framer-1at294g { align-content: center; align-items: center; display: flex; flex: none; flex-direction: row; flex-wrap: nowrap; gap: 0px; height: 36px; justify-content: center; overflow: hidden; padding: 10px; position: relative; width: 36px; will-change: var(--framer-will-change-override, transform); z-index: 2; }`,
+          `.framer-HGRLy .framer-1w72qz8 { bottom: -36px; flex: none; height: 36px; left: 0px; overflow: visible; position: absolute; right: 0px; z-index: 1; }`,
+          `.framer-HGRLy .framer-1e5wxu { aspect-ratio: 1 / 1; flex: none; height: var(--framer-aspect-ratio-supported, 16px); left: 50%; position: absolute; top: 50%; width: 16px; z-index: 1; }`,
+          `.framer-HGRLy .framer-gq0wdq { aspect-ratio: 1 / 1; bottom: -20px; flex: none; height: var(--framer-aspect-ratio-supported, 16px); left: 50%; position: absolute; width: 16px; z-index: 1; }`,
+          `.framer-HGRLy.framer-v-5ymrl2.framer-ej88hq { padding: 5px 10px 5px 5px; }`,
+          `.framer-HGRLy.framer-v-5ymrl2 .framer-hg8c2v { order: 1; }`,
+          `.framer-HGRLy.framer-v-5ymrl2 .framer-1at294g { order: 0; }`,
+          `.framer-HGRLy.framer-v-ej88hq.hover .framer-1w72qz8, .framer-HGRLy.framer-v-5ymrl2.hover .framer-1w72qz8 { bottom: 0px; height: unset; top: 0px; }`,
+          `.framer-HGRLy.framer-v-ej88hq.hover .framer-1e5wxu, .framer-HGRLy.framer-v-5ymrl2.hover .framer-1e5wxu { top: -20px; }`,
+          `.framer-HGRLy.framer-v-ej88hq.hover .framer-gq0wdq { bottom: 10px; }`,
+          `.framer-HGRLy.framer-v-5ymrl2.hover .framer-gq0wdq { bottom: unset; top: 50%; }`,
+          ...k,
+        ],
+        `framer-HGRLy`,
+      )),
+      (q = K),
+      (K.displayName = `Primary Button`),
+      (K.defaultProps = { height: 46, width: 144 }),
+      C(K, {
+        variant: {
+          options: [`zphlO018I`, `pBG7yIB13`],
+          optionTitles: [`Default`, `Reverse`],
+          title: `Variant`,
+          type: w.Enum,
+        },
+        FRGXCszKE: {
+          defaultValue: `Get Started`,
+          displayTextArea: !1,
+          title: `Title`,
+          type: w.String,
+        },
+        onFRGXCszKEChange: { changes: `FRGXCszKE`, type: w.ChangeHandler },
+        s5zVGHZrm: {
+          defaultValue: `var(--token-962dbf23-cea4-4b3f-b44d-d5595ab68b22, rgb(255, 255, 255)) /* {"name":"White"} */`,
+          title: `Fill`,
+          type: w.Color,
+        },
+        KS1OTpe12: {
+          defaultValue: `var(--token-18c0a90f-4c91-40d5-87bc-96696572c777, rgb(0, 0, 0)) /* {"name":"Black"} */`,
+          title: `Title Color`,
+          type: w.Color,
+        },
+        w1blkKoqs: {
+          defaultValue: 100,
+          title: `Hover Title Invert`,
+          type: w.Number,
+        },
+        onw1blkKoqsChange: { changes: `w1blkKoqs`, type: w.ChangeHandler },
+        RnDkx60mf: {
+          defaultValue: `var(--token-18c0a90f-4c91-40d5-87bc-96696572c777, rgb(0, 0, 0)) /* {"name":"Black"} */`,
+          title: `Hover Fill`,
+          type: w.Color,
+        },
+        VmYpdrASS: {
+          defaultValue: `var(--token-06856072-b723-433b-af66-5e2af035f2ef, rgb(255, 33, 33)) /* {"name":"Primary"} */`,
+          title: `Arrow Fill`,
+          type: w.Color,
+        },
+        AN8wZ6h6b: {
+          defaultValue: `var(--token-962dbf23-cea4-4b3f-b44d-d5595ab68b22, rgb(255, 255, 255)) /* {"name":"White"} */`,
+          title: `Arrow Overlay`,
+          type: w.Color,
+        },
+        OubOSgTqz: {
+          defaultValue: `var(--token-18c0a90f-4c91-40d5-87bc-96696572c777, rgb(0, 0, 0)) /* {"name":"Black"} */`,
+          title: `Hover Arrow Stroke`,
+          type: w.Color,
+        },
+        evTCyulAI: { title: `Link`, type: w.Link },
+        qV_NmyJVp: { defaultValue: !1, title: `New Tab`, type: w.Boolean },
+        onqV_NmyJVpChange: { changes: `qV_NmyJVp`, type: w.ChangeHandler },
+        Cya6RuIUy: {
+          defaultValue: !1,
+          title: `Smooth Scroll`,
+          type: w.Boolean,
+        },
+        onCya6RuIUyChange: { changes: `Cya6RuIUy`, type: w.ChangeHandler },
+      }),
+      _(
+        K,
+        [
+          {
+            explicitInter: !0,
+            fonts: [
+              {
+                cssFamilyName: `Inter`,
+                source: `framer`,
+                style: `normal`,
+                uiFamilyName: `Inter`,
+                unicodeRange: `U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F`,
+                url: `https://framerusercontent.com/assets/5vvr9Vy74if2I6bQbJvbw7SY1pQ.woff2`,
+                weight: `400`,
+              },
+              {
+                cssFamilyName: `Inter`,
+                source: `framer`,
+                style: `normal`,
+                uiFamilyName: `Inter`,
+                unicodeRange: `U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116`,
+                url: `https://framerusercontent.com/assets/EOr0mi4hNtlgWNn9if640EZzXCo.woff2`,
+                weight: `400`,
+              },
+              {
+                cssFamilyName: `Inter`,
+                source: `framer`,
+                style: `normal`,
+                uiFamilyName: `Inter`,
+                unicodeRange: `U+1F00-1FFF`,
+                url: `https://framerusercontent.com/assets/Y9k9QrlZAqio88Klkmbd8VoMQc.woff2`,
+                weight: `400`,
+              },
+              {
+                cssFamilyName: `Inter`,
+                source: `framer`,
+                style: `normal`,
+                uiFamilyName: `Inter`,
+                unicodeRange: `U+0370-03FF`,
+                url: `https://framerusercontent.com/assets/OYrD2tBIBPvoJXiIHnLoOXnY9M.woff2`,
+                weight: `400`,
+              },
+              {
+                cssFamilyName: `Inter`,
+                source: `framer`,
+                style: `normal`,
+                uiFamilyName: `Inter`,
+                unicodeRange: `U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF`,
+                url: `https://framerusercontent.com/assets/JeYwfuaPfZHQhEG8U5gtPDZ7WQ.woff2`,
+                weight: `400`,
+              },
+              {
+                cssFamilyName: `Inter`,
+                source: `framer`,
+                style: `normal`,
+                uiFamilyName: `Inter`,
+                unicodeRange: `U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2070, U+2074-207E, U+2080-208E, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD`,
+                url: `https://framerusercontent.com/assets/GrgcKwrN6d3Uz8EwcLHZxwEfC4.woff2`,
+                weight: `400`,
+              },
+              {
+                cssFamilyName: `Inter`,
+                source: `framer`,
+                style: `normal`,
+                uiFamilyName: `Inter`,
+                unicodeRange: `U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB`,
+                url: `https://framerusercontent.com/assets/b6Y37FthZeALduNqHicBT6FutY.woff2`,
+                weight: `400`,
+              },
+            ],
+          },
+          ...N,
+          ...b(D),
+        ],
+        { supportsExplicitInterCodegen: !0 },
+      ));
+  });
+export { J as n, q as t };
+//# sourceMappingURL=V4XApcPH4.BkDsdD9q.mjs.map

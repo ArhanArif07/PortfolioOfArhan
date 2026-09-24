@@ -1,0 +1,2232 @@
+import { t as e } from "./rolldown-runtime.DsXBSD_B.mjs";
+import {
+  F as t,
+  M as n,
+  T as r,
+  _ as i,
+  b as a,
+  j as o,
+  k as s,
+  l as c,
+  s as l,
+  u,
+} from "./react.CUuwdGgG.mjs";
+import { C as d, a as f, r as ee, t as p } from "./motion.yFoJz7cr.mjs";
+import {
+  B as m,
+  Ct as h,
+  H as te,
+  M as g,
+  O as _,
+  P as v,
+  St as ne,
+  T as y,
+  Tt as b,
+  V as x,
+  _t as S,
+  a as C,
+  d as w,
+  ft as T,
+  gt as re,
+  i as E,
+  k as D,
+  lt as ie,
+  o as O,
+  ot as k,
+  p as A,
+  q as j,
+  ut as ae,
+  w as M,
+  x as N,
+  xt as oe,
+} from "./framer.uWP7Qtvw.mjs";
+import { i as P, n as se, r as ce, t as le } from "./sPvC_pCwb.Ggz8zae4.mjs";
+import { n as ue, t as F } from "./aAuC7HDti.CWi1sD2t.mjs";
+import { i as de, n as fe, r as pe, t as me } from "./uyfn5rCXc.Bs2FpWo_.mjs";
+import { n as I, t as he } from "./q89I9np3U.BikVgVeT.mjs";
+import { i as ge, n as _e, r as ve, t as ye } from "./QQizO8D2m.BmdOiDZq.mjs";
+import { i as be, n as xe, r as Se, t as Ce } from "./kyo9an03l.B4Z-j9SF.mjs";
+import { n as we, t as L } from "./SmoothScroll_Prod.Ux-EqKSq.mjs";
+import { i as Te, n as Ee, r as De, t as Oe } from "./uyfn5rCXc.BRCldkoF.mjs";
+import { n as ke, r as Ae } from "./iMmW2B_8v.BxgjtIV9.mjs";
+function je(e, ...t) {
+  let n = {};
+  return (t?.forEach((t) => t && Object.assign(n, e[t])), n);
+}
+var R,
+  z,
+  B,
+  V,
+  Me,
+  Ne,
+  Pe,
+  Fe,
+  Ie,
+  Le,
+  H,
+  U,
+  Re = e(() => {
+    (l(),
+      j(),
+      p(),
+      r(),
+      be(),
+      de(),
+      (R = [`GCkGelCLr`, `xaczGc8Sh`]),
+      (z = `framer-WhM3v`),
+      (B = { GCkGelCLr: `framer-v-2wum0d`, xaczGc8Sh: `framer-v-zlebpx` }),
+      (V = (e, t) => {
+        if (typeof e == `number` && Number.isFinite(e))
+          return Math.max(0, e) + `px`;
+        if (typeof e != `string` || typeof t != `number`) return;
+        let n = e.split(` `);
+        return n[t] || n[t - 2] || n[0];
+      }),
+      (Me = { bounce: 0.2, delay: 0, duration: 0.4, type: `spring` }),
+      (Ne = ({ value: e, children: t }) => {
+        let r = o(f),
+          i = e ?? r.transition,
+          a = n(() => ({ ...r, transition: i }), [JSON.stringify(i)]);
+        return c(f.Provider, { value: a, children: t });
+      }),
+      (Pe = { Feature: `GCkGelCLr`, Tablet: `xaczGc8Sh` }),
+      (Fe = d.create(t)),
+      (Ie = ({
+        border: e,
+        featureFour: t,
+        featureOne: n,
+        featureThree: r,
+        featureTwo: i,
+        height: a,
+        id: o,
+        radius: s,
+        width: c,
+        ...l
+      }) => ({
+        ...l,
+        ayKt_gD6Y: r ?? l.ayKt_gD6Y ?? `full`,
+        nS_do7WL1: n ?? l.nS_do7WL1 ?? `Brand Identity System`,
+        Ppcbs5bCy: i ?? l.Ppcbs5bCy ?? `basic`,
+        SKoKH4aiq: t ?? l.SKoKH4aiq ?? `advanced`,
+        variant: Pe[l.variant] ?? l.variant ?? `GCkGelCLr`,
+        VsaafCrxE: e ??
+          l.VsaafCrxE ?? {
+            borderColor: `var(--token-c8f555ca-85f2-45bb-95da-99cc04a2af76, rgb(149, 149, 149)) /* {"name":"Dark Stroke"} */`,
+            borderStyle: `dashed`,
+            borderWidth: 1,
+          },
+        wkeMEro6z: s ?? l.wkeMEro6z ?? `0px`,
+      })),
+      (Le = (e, t) =>
+        e.layoutDependency ? t.join(`-`) + e.layoutDependency : t.join(`-`)),
+      (H = h(
+        i(function (e, n) {
+          let r = s(null),
+            i = n ?? r,
+            o = a(),
+            { activeLocale: l, setLocale: f } = re();
+          k();
+          let {
+              style: p,
+              className: m,
+              layoutId: h,
+              variant: te,
+              nS_do7WL1: _,
+              Ppcbs5bCy: v,
+              ayKt_gD6Y: b,
+              SKoKH4aiq: x,
+              VsaafCrxE: S,
+              wkeMEro6z: C,
+              ...w
+            } = Ie(e),
+            {
+              baseVariant: T,
+              classNames: E,
+              clearLoadingGesture: D,
+              gestureHandlers: ie,
+              gestureVariant: O,
+              isLoading: A,
+              setGestureState: j,
+              setVariant: ae,
+              variants: M,
+            } = ne({
+              cycleOrder: R,
+              defaultVariant: `GCkGelCLr`,
+              ref: i,
+              variant: te,
+              variantClassNames: B,
+            }),
+            N = Le(e, M),
+            oe = g(z, Ce, me);
+          return c(ee, {
+            id: h ?? o,
+            children: c(Fe, {
+              animate: M,
+              initial: !1,
+              children: c(Ne, {
+                value: Me,
+                children: u(d.div, {
+                  ...w,
+                  ...ie,
+                  className: g(oe, `framer-2wum0d`, m, E),
+                  "data-border": !0,
+                  "data-framer-name": `Feature`,
+                  layoutDependency: N,
+                  layoutId: `GCkGelCLr`,
+                  ref: i,
+                  style: {
+                    "--border-bottom-width":
+                      (S?.borderBottomWidth ?? S?.borderWidth) + `px`,
+                    "--border-color": S?.borderColor,
+                    "--border-left-width":
+                      (S?.borderLeftWidth ?? S?.borderWidth) + `px`,
+                    "--border-right-width":
+                      (S?.borderRightWidth ?? S?.borderWidth) + `px`,
+                    "--border-style": S?.borderStyle,
+                    "--border-top-width":
+                      (S?.borderTopWidth ?? S?.borderWidth) + `px`,
+                    borderBottomLeftRadius: V(C, 3),
+                    borderBottomRightRadius: V(C, 2),
+                    borderTopLeftRadius: V(C, 0),
+                    borderTopRightRadius: V(C, 1),
+                    ...p,
+                  },
+                  ...je({ xaczGc8Sh: { "data-framer-name": `Tablet` } }, T, O),
+                  children: [
+                    c(y, {
+                      __fromCanvasComponent: !0,
+                      children: c(t, {
+                        children: c(d.h6, {
+                          className: `framer-styles-preset-1litcpx`,
+                          "data-styles-preset": `kyo9an03l`,
+                          dir: `auto`,
+                          style: {
+                            "--framer-text-color": `var(--extracted-1w1cjl5, var(--token-18c0a90f-4c91-40d5-87bc-96696572c777, rgb(0, 0, 0)))`,
+                          },
+                          children: `Brand Identity System`,
+                        }),
+                      }),
+                      className: `framer-j9e6vc`,
+                      fonts: [`Inter`],
+                      layoutDependency: N,
+                      layoutId: `ppgypy7fn`,
+                      style: {
+                        "--extracted-1w1cjl5": `var(--token-18c0a90f-4c91-40d5-87bc-96696572c777, rgb(0, 0, 0))`,
+                        "--framer-link-text-color": `rgb(0, 153, 255)`,
+                        "--framer-link-text-decoration": `underline`,
+                      },
+                      text: _,
+                      verticalAlignment: `top`,
+                      withExternalLayout: !0,
+                    }),
+                    c(y, {
+                      __fromCanvasComponent: !0,
+                      children: c(t, {
+                        children: c(d.p, {
+                          className: `framer-styles-preset-rn7xf9`,
+                          "data-styles-preset": `uyfn5rCXc`,
+                          dir: `auto`,
+                          style: {
+                            "--framer-text-color": `var(--extracted-r6o4lv, var(--token-18c0a90f-4c91-40d5-87bc-96696572c777, rgb(0, 0, 0)))`,
+                          },
+                          children: `basic`,
+                        }),
+                      }),
+                      className: `framer-128yxme`,
+                      fonts: [`Inter`],
+                      layoutDependency: N,
+                      layoutId: `nWytThqJj`,
+                      style: {
+                        "--extracted-r6o4lv": `var(--token-18c0a90f-4c91-40d5-87bc-96696572c777, rgb(0, 0, 0))`,
+                        "--framer-link-text-color": `rgb(0, 153, 255)`,
+                        "--framer-link-text-decoration": `underline`,
+                      },
+                      text: v,
+                      verticalAlignment: `top`,
+                      withExternalLayout: !0,
+                    }),
+                    c(y, {
+                      __fromCanvasComponent: !0,
+                      children: c(t, {
+                        children: c(d.p, {
+                          className: `framer-styles-preset-rn7xf9`,
+                          "data-styles-preset": `uyfn5rCXc`,
+                          dir: `auto`,
+                          style: {
+                            "--framer-text-color": `var(--extracted-r6o4lv, var(--token-18c0a90f-4c91-40d5-87bc-96696572c777, rgb(0, 0, 0)))`,
+                          },
+                          children: `full`,
+                        }),
+                      }),
+                      className: `framer-3a138`,
+                      fonts: [`Inter`],
+                      layoutDependency: N,
+                      layoutId: `PvQ46l4hU`,
+                      style: {
+                        "--extracted-r6o4lv": `var(--token-18c0a90f-4c91-40d5-87bc-96696572c777, rgb(0, 0, 0))`,
+                        "--framer-link-text-color": `rgb(0, 153, 255)`,
+                        "--framer-link-text-decoration": `underline`,
+                      },
+                      text: b,
+                      verticalAlignment: `top`,
+                      withExternalLayout: !0,
+                    }),
+                    c(y, {
+                      __fromCanvasComponent: !0,
+                      children: c(t, {
+                        children: c(d.p, {
+                          className: `framer-styles-preset-rn7xf9`,
+                          "data-styles-preset": `uyfn5rCXc`,
+                          dir: `auto`,
+                          style: {
+                            "--framer-text-color": `var(--extracted-r6o4lv, var(--token-18c0a90f-4c91-40d5-87bc-96696572c777, rgb(0, 0, 0)))`,
+                          },
+                          children: `advanced`,
+                        }),
+                      }),
+                      className: `framer-11xjx0i`,
+                      fonts: [`Inter`],
+                      layoutDependency: N,
+                      layoutId: `UIwUGnu_g`,
+                      style: {
+                        "--extracted-r6o4lv": `var(--token-18c0a90f-4c91-40d5-87bc-96696572c777, rgb(0, 0, 0))`,
+                        "--framer-link-text-color": `rgb(0, 153, 255)`,
+                        "--framer-link-text-decoration": `underline`,
+                      },
+                      text: x,
+                      verticalAlignment: `top`,
+                      withExternalLayout: !0,
+                    }),
+                  ],
+                }),
+              }),
+            }),
+          });
+        }),
+        [
+          `@supports (aspect-ratio: 1) { body { --framer-aspect-ratio-supported: auto; } }`,
+          `.framer-WhM3v.framer-lgxp5f, .framer-WhM3v .framer-lgxp5f { display: block; }`,
+          `.framer-WhM3v.framer-2wum0d { display: grid; gap: 10px 0px; grid-auto-rows: min-content; grid-template-columns: repeat(4, minmax(50px, 1fr)); grid-template-rows: repeat(1, min-content); height: min-content; justify-content: center; overflow: var(--overflow-clip-fallback, clip); padding: 20px; position: relative; width: 1160px; will-change: var(--framer-will-change-override, transform); }`,
+          `.framer-WhM3v .framer-j9e6vc { align-self: start; flex: none; height: auto; justify-self: start; position: relative; white-space: pre; width: fit-content; }`,
+          `.framer-WhM3v .framer-128yxme, .framer-WhM3v .framer-3a138, .framer-WhM3v .framer-11xjx0i { align-self: center; flex: none; height: auto; justify-self: start; position: relative; white-space: pre; width: 100%; }`,
+          `.framer-WhM3v.framer-v-zlebpx.framer-2wum0d { grid-template-columns: repeat(5, minmax(50px, 1fr)); }`,
+          `.framer-WhM3v.framer-v-zlebpx .framer-j9e6vc { grid-column: span 2; }`,
+          `.framer-WhM3v.framer-v-zlebpx .framer-11xjx0i { white-space: pre-wrap; word-break: break-word; word-wrap: break-word; }`,
+          ...xe,
+          ...fe,
+          `.framer-WhM3v[data-border="true"]::after, .framer-WhM3v [data-border="true"]::after { content: ""; border-width: var(--border-top-width, 0) var(--border-right-width, 0) var(--border-bottom-width, 0) var(--border-left-width, 0); border-color: var(--border-color, none); border-style: var(--border-style, none); width: 100%; height: 100%; position: absolute; box-sizing: border-box; left: 0; top: 0; border-radius: inherit; corner-shape: inherit; pointer-events: none; }`,
+        ],
+        `framer-WhM3v`,
+      )),
+      (U = H),
+      (H.displayName = `Feature`),
+      (H.defaultProps = { height: 200, width: 1160 }),
+      D(H, {
+        variant: {
+          options: [`GCkGelCLr`, `xaczGc8Sh`],
+          optionTitles: [`Feature`, `Tablet`],
+          title: `Variant`,
+          type: O.Enum,
+        },
+        nS_do7WL1: {
+          defaultValue: `Brand Identity System`,
+          displayTextArea: !1,
+          title: `Feature One`,
+          type: O.String,
+        },
+        onnS_do7WL1Change: { changes: `nS_do7WL1`, type: O.ChangeHandler },
+        Ppcbs5bCy: {
+          defaultValue: `basic`,
+          displayTextArea: !1,
+          title: `Feature Two`,
+          type: O.String,
+        },
+        onPpcbs5bCyChange: { changes: `Ppcbs5bCy`, type: O.ChangeHandler },
+        ayKt_gD6Y: {
+          defaultValue: `full`,
+          displayTextArea: !1,
+          title: `Feature Three`,
+          type: O.String,
+        },
+        onayKt_gD6YChange: { changes: `ayKt_gD6Y`, type: O.ChangeHandler },
+        SKoKH4aiq: {
+          defaultValue: `advanced`,
+          displayTextArea: !1,
+          title: `Feature Four`,
+          type: O.String,
+        },
+        onSKoKH4aiqChange: { changes: `SKoKH4aiq`, type: O.ChangeHandler },
+        VsaafCrxE: {
+          defaultValue: {
+            borderColor: `var(--token-c8f555ca-85f2-45bb-95da-99cc04a2af76, rgb(149, 149, 149)) /* {"name":"Dark Stroke"} */`,
+            borderStyle: `dashed`,
+            borderWidth: 1,
+          },
+          title: `Border`,
+          type: O.Border,
+        },
+        wkeMEro6z: {
+          defaultValue: `0px`,
+          title: `Radius`,
+          type: O.BorderRadius,
+        },
+      }),
+      _(
+        H,
+        [
+          {
+            explicitInter: !0,
+            fonts: [
+              {
+                cssFamilyName: `Inter`,
+                source: `framer`,
+                style: `normal`,
+                uiFamilyName: `Inter`,
+                unicodeRange: `U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F`,
+                url: `https://framerusercontent.com/assets/5vvr9Vy74if2I6bQbJvbw7SY1pQ.woff2`,
+                weight: `400`,
+              },
+              {
+                cssFamilyName: `Inter`,
+                source: `framer`,
+                style: `normal`,
+                uiFamilyName: `Inter`,
+                unicodeRange: `U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116`,
+                url: `https://framerusercontent.com/assets/EOr0mi4hNtlgWNn9if640EZzXCo.woff2`,
+                weight: `400`,
+              },
+              {
+                cssFamilyName: `Inter`,
+                source: `framer`,
+                style: `normal`,
+                uiFamilyName: `Inter`,
+                unicodeRange: `U+1F00-1FFF`,
+                url: `https://framerusercontent.com/assets/Y9k9QrlZAqio88Klkmbd8VoMQc.woff2`,
+                weight: `400`,
+              },
+              {
+                cssFamilyName: `Inter`,
+                source: `framer`,
+                style: `normal`,
+                uiFamilyName: `Inter`,
+                unicodeRange: `U+0370-03FF`,
+                url: `https://framerusercontent.com/assets/OYrD2tBIBPvoJXiIHnLoOXnY9M.woff2`,
+                weight: `400`,
+              },
+              {
+                cssFamilyName: `Inter`,
+                source: `framer`,
+                style: `normal`,
+                uiFamilyName: `Inter`,
+                unicodeRange: `U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF`,
+                url: `https://framerusercontent.com/assets/JeYwfuaPfZHQhEG8U5gtPDZ7WQ.woff2`,
+                weight: `400`,
+              },
+              {
+                cssFamilyName: `Inter`,
+                source: `framer`,
+                style: `normal`,
+                uiFamilyName: `Inter`,
+                unicodeRange: `U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2070, U+2074-207E, U+2080-208E, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD`,
+                url: `https://framerusercontent.com/assets/GrgcKwrN6d3Uz8EwcLHZxwEfC4.woff2`,
+                weight: `400`,
+              },
+              {
+                cssFamilyName: `Inter`,
+                source: `framer`,
+                style: `normal`,
+                uiFamilyName: `Inter`,
+                unicodeRange: `U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB`,
+                url: `https://framerusercontent.com/assets/b6Y37FthZeALduNqHicBT6FutY.woff2`,
+                weight: `400`,
+              },
+            ],
+          },
+          ...x(Se),
+          ...x(pe),
+        ],
+        { supportsExplicitInterCodegen: !0 },
+      ));
+  }),
+  ze,
+  Be,
+  Ve,
+  W,
+  He,
+  Ue,
+  We,
+  Ge,
+  Ke,
+  qe,
+  Je,
+  Ye,
+  Xe,
+  Ze,
+  Qe,
+  $e,
+  G,
+  K,
+  et,
+  q,
+  tt,
+  J,
+  Y,
+  X,
+  nt,
+  rt,
+  it,
+  at,
+  Z,
+  Q,
+  ot,
+  st,
+  $,
+  ct,
+  lt;
+e(() => {
+  (l(),
+    j(),
+    p(),
+    r(),
+    we(),
+    ue(),
+    Re(),
+    he(),
+    ge(),
+    P(),
+    Te(),
+    ke(),
+    (ze = m(L)),
+    (Be = b(A)),
+    (Ve = m(F)),
+    (W = b(C)),
+    (He = b(y)),
+    (Ue = m(I)),
+    (We = b(d.div)),
+    (Ge = m(U)),
+    (Ke = {
+      EHGA03dpT: `(min-width: 810px) and (max-width: 1199.98px)`,
+      KsklgnbMh: `(min-width: 1200px)`,
+      nPXYRbDJ_: `(max-width: 809.98px)`,
+    }),
+    (qe = [`z-index-2`]),
+    (Je = `framer-J1XvW`),
+    (Ye = {
+      EHGA03dpT: `framer-v-1qycwkn`,
+      KsklgnbMh: `framer-v-kdj946`,
+      nPXYRbDJ_: `framer-v-vf73w3`,
+    }),
+    (Xe = (e, t, n) => (e && t ? `position` : n)),
+    (Ze = {
+      opacity: 1,
+      rotate: 0,
+      rotateX: 0,
+      rotateY: 0,
+      scale: 1.5,
+      skewX: 0,
+      skewY: 0,
+      x: 0,
+      y: 0,
+    }),
+    (Qe = { damping: 150, delay: 0, mass: 1, stiffness: 500, type: `spring` }),
+    ($e = {
+      opacity: 0,
+      rotate: 0,
+      rotateX: 0,
+      rotateY: 0,
+      scale: 1,
+      skewX: 0,
+      skewY: 0,
+      x: 0,
+      y: 0,
+    }),
+    (G = { damping: 150, delay: 0.4, mass: 1, stiffness: 500, type: `spring` }),
+    (K = {
+      filter: `blur(10px)`,
+      opacity: 0.001,
+      rotate: 0,
+      scale: 1,
+      skewX: 0,
+      skewY: 0,
+      x: 0,
+      y: 60,
+    }),
+    (et = {
+      effect: K,
+      repeat: !1,
+      startDelay: 0.8,
+      tokenization: `line`,
+      transition: {
+        damping: 150,
+        delay: 0.05,
+        mass: 1,
+        stiffness: 500,
+        type: `spring`,
+      },
+      trigger: `onMount`,
+      type: `appear`,
+    }),
+    (q = {
+      opacity: 0,
+      rotate: 0,
+      rotateX: 0,
+      rotateY: 0,
+      scale: 1,
+      skewX: 0,
+      skewY: 0,
+      x: 0,
+      y: 40,
+    }),
+    (tt = {
+      damping: 150,
+      delay: 1.2,
+      mass: 1,
+      stiffness: 500,
+      type: `spring`,
+    }),
+    (J = {
+      opacity: 0,
+      rotate: 0,
+      rotateX: 0,
+      rotateY: 0,
+      scale: 1,
+      skewX: 0,
+      skewY: 0,
+      x: 0,
+      y: 100,
+    }),
+    (Y = (...e) => {
+      for (let t of e) if (t && typeof t == `string`) return t;
+    }),
+    (X = { damping: 150, delay: 0.5, mass: 1, stiffness: 500, type: `spring` }),
+    (nt = {
+      damping: 150,
+      delay: 0.6,
+      mass: 1,
+      stiffness: 500,
+      type: `spring`,
+    }),
+    (rt = {
+      opacity: 0,
+      rotate: 0,
+      rotateX: 0,
+      rotateY: 0,
+      scale: 1,
+      skewX: 0,
+      skewY: 0,
+      x: 0,
+      y: 50,
+    }),
+    (it = { damping: 100, delay: 0, mass: 1, stiffness: 300, type: `spring` }),
+    (at = {
+      effect: K,
+      repeat: !1,
+      startDelay: 0.4,
+      threshold: 0,
+      tokenization: `line`,
+      transition: {
+        damping: 150,
+        delay: 0.25,
+        mass: 1,
+        stiffness: 500,
+        type: `spring`,
+      },
+      trigger: `onInView`,
+      type: `appear`,
+    }),
+    (Z = {
+      opacity: 0,
+      rotate: 0,
+      rotateX: 0,
+      rotateY: 0,
+      scale: 1,
+      skewX: 0,
+      skewY: 0,
+      x: 0,
+      y: 30,
+    }),
+    (Q = { Desktop: `KsklgnbMh`, Phone: `nPXYRbDJ_`, Tablet: `EHGA03dpT` }),
+    (ot = ({ value: e }) =>
+      T()
+        ? null
+        : c(`style`, {
+            dangerouslySetInnerHTML: { __html: e },
+            "data-framer-html-style": ``,
+          })),
+    (st = ({ height: e, id: t, width: n, ...r }) => ({
+      ...r,
+      variant: Q[r.variant] ?? r.variant ?? `KsklgnbMh`,
+    })),
+    ($ = h(
+      i(function (e, r) {
+        let i = s(null),
+          l = r ?? i,
+          p = a(),
+          { activeLocale: m, setLocale: h } = re(),
+          _ = k(),
+          { style: v, className: ne, layoutId: b, variant: x, ...T } = st(e);
+        S(n(() => Ae({}, m), [m]));
+        let [D, O] = ae(x, Ke, !1),
+          A = g(Je, ye, le, Oe),
+          j = o(w)?.isLayoutTemplate,
+          P = Xe(j, !!o(f)?.transition?.layout);
+        return (
+          oe(),
+          ie({}),
+          c(w.Provider, {
+            value: {
+              activeVariantId: D,
+              humanReadableVariantMap: Q,
+              primaryVariantId: `KsklgnbMh`,
+              variantClassNames: Ye,
+            },
+            children: u(ee, {
+              id: b ?? p,
+              children: [
+                c(ot, {
+                  value: `html body { background: var(--token-962dbf23-cea4-4b3f-b44d-d5595ab68b22, rgb(255, 255, 255)); }`,
+                }),
+                u(d.div, {
+                  ...T,
+                  className: g(A, `framer-kdj946`, ne),
+                  ref: l,
+                  style: { ...v },
+                  children: [
+                    c(E, {
+                      children: c(C, {
+                        className: `framer-1la93f1-container`,
+                        isAuthoredByUser: !0,
+                        isModuleExternal: !0,
+                        layout: P,
+                        nodeId: `dBtAy5mk0`,
+                        scopeId: `iMmW2B_8v`,
+                        children: c(L, {
+                          height: `100%`,
+                          id: `dBtAy5mk0`,
+                          intensity: 20,
+                          layoutId: `dBtAy5mk0`,
+                          width: `100%`,
+                        }),
+                      }),
+                    }),
+                    u(d.section, {
+                      className: `framer-1wsyfck`,
+                      "data-framer-name": `Hero`,
+                      layout: P,
+                      children: [
+                        c(`div`, {
+                          className: `framer-g2yvsd`,
+                          "data-framer-name": `Image-box`,
+                          children: c(Be, {
+                            __framer__animate: { transition: Qe },
+                            __framer__animateOnce: !0,
+                            __framer__enter: Ze,
+                            __framer__styleAppearEffectEnabled: !0,
+                            __framer__threshold: 0,
+                            __perspectiveFX: !1,
+                            __targetOpacity: 1,
+                            background: {
+                              alt: `bg`,
+                              fit: `fill`,
+                              intrinsicHeight: 1650,
+                              intrinsicWidth: 4290,
+                              loading: te((_?.y || 0) + 0 + 200 + 5 + 0),
+                              pixelHeight: 1650,
+                              pixelWidth: 4290,
+                              sizes: `calc(${_?.width || `100vw`} - 10px)`,
+                              src: `https://framerusercontent.com/images/QjtjloksFnCgypfcIJxa41z3kQ.png?width=4290&height=1650`,
+                              srcSet: `https://framerusercontent.com/images/QjtjloksFnCgypfcIJxa41z3kQ.png?scale-down-to=512&width=4290&height=1650 512w,https://framerusercontent.com/images/QjtjloksFnCgypfcIJxa41z3kQ.png?scale-down-to=1024&width=4290&height=1650 1024w,https://framerusercontent.com/images/QjtjloksFnCgypfcIJxa41z3kQ.png?scale-down-to=2048&width=4290&height=1650 2048w,https://framerusercontent.com/images/QjtjloksFnCgypfcIJxa41z3kQ.png?scale-down-to=4096&width=4290&height=1650 4096w,https://framerusercontent.com/images/QjtjloksFnCgypfcIJxa41z3kQ.png?width=4290&height=1650 4290w`,
+                            },
+                            className: `framer-14992rt`,
+                            "data-framer-name": `Background-image`,
+                          }),
+                        }),
+                        c(`div`, {
+                          className: `framer-3z2owj`,
+                          "data-framer-name": `Container`,
+                          children: u(`div`, {
+                            className: `framer-loqwft`,
+                            "data-framer-name": `Header`,
+                            children: [
+                              c(`div`, {
+                                className: `framer-rdol63`,
+                                "data-framer-name": `Label-box`,
+                                children: c(N, {
+                                  breakpoint: D,
+                                  overrides: {
+                                    EHGA03dpT: {
+                                      width: `max(max(min(max(${_?.width || `100vw`} - 10px, 1px), 1440px) - 32px, 1px) / 4, 50px)`,
+                                    },
+                                    nPXYRbDJ_: {
+                                      width: `max(max(min(max(${_?.width || `100vw`} - 10px, 1px), 1440px) - 32px, 1px) / 4, 50px)`,
+                                    },
+                                  },
+                                  children: c(E, {
+                                    height: 20,
+                                    width: `max(max(min(max(${_?.width || `100vw`} - 10px, 1px), 1440px) - 40px, 1px) / 4, 50px)`,
+                                    y:
+                                      (_?.y || 0) +
+                                      0 +
+                                      200 +
+                                      5 +
+                                      157.4 +
+                                      0 +
+                                      0 +
+                                      0 +
+                                      0 +
+                                      0 +
+                                      0,
+                                    children: c(W, {
+                                      __framer__animate: { transition: G },
+                                      __framer__animateOnce: !0,
+                                      __framer__enter: $e,
+                                      __framer__styleAppearEffectEnabled: !0,
+                                      __framer__threshold: 0,
+                                      __perspectiveFX: !1,
+                                      __targetOpacity: 1,
+                                      className: `framer-1m70apb-container`,
+                                      nodeId: `IiLJT7GjN`,
+                                      rendersWithMotion: !0,
+                                      scopeId: `iMmW2B_8v`,
+                                      children: c(F, {
+                                        GZXD4XDjD: `var(--token-962dbf23-cea4-4b3f-b44d-d5595ab68b22, rgb(255, 255, 255))`,
+                                        height: `100%`,
+                                        id: `IiLJT7GjN`,
+                                        layoutId: `IiLJT7GjN`,
+                                        t9Ips89AM: `var(--token-06856072-b723-433b-af66-5e2af035f2ef, rgb(255, 33, 33))`,
+                                        width: `100%`,
+                                        wYgOcdV21: `PRICING PLAN`,
+                                      }),
+                                    }),
+                                  }),
+                                }),
+                              }),
+                              u(`div`, {
+                                className: `framer-rb97xg`,
+                                "data-framer-name": `Heading`,
+                                children: [
+                                  c(y, {
+                                    __fromCanvasComponent: !0,
+                                    children: c(t, {
+                                      children: u(`h2`, {
+                                        className: `framer-styles-preset-w4n9ce`,
+                                        "data-styles-preset": `QQizO8D2m`,
+                                        dir: `auto`,
+                                        style: {
+                                          "--framer-text-color": `var(--token-962dbf23-cea4-4b3f-b44d-d5595ab68b22, rgb(255, 255, 255))`,
+                                        },
+                                        children: [
+                                          c(`span`, {
+                                            style: {
+                                              "--framer-text-color": `var(--token-06856072-b723-433b-af66-5e2af035f2ef, rgb(255, 33, 33))`,
+                                            },
+                                            children: `*`,
+                                          }),
+                                          `Pick the right plan`,
+                                          c(`span`, {
+                                            style: {
+                                              "--framer-text-color": `var(--token-06856072-b723-433b-af66-5e2af035f2ef, rgb(255, 33, 33))`,
+                                            },
+                                            children: `*`,
+                                          }),
+                                        ],
+                                      }),
+                                    }),
+                                    className: `framer-jimlsj`,
+                                    effect: et,
+                                    fonts: [`Inter`],
+                                    verticalAlignment: `top`,
+                                    withExternalLayout: !0,
+                                  }),
+                                  c(He, {
+                                    __framer__animate: { transition: tt },
+                                    __framer__animateOnce: !0,
+                                    __framer__enter: q,
+                                    __framer__styleAppearEffectEnabled: !0,
+                                    __framer__threshold: 0,
+                                    __fromCanvasComponent: !0,
+                                    __perspectiveFX: !1,
+                                    __targetOpacity: 1,
+                                    children: c(t, {
+                                      children: c(`p`, {
+                                        className: `framer-styles-preset-1mk8z8h`,
+                                        "data-styles-preset": `sPvC_pCwb`,
+                                        dir: `auto`,
+                                        children: `Flexible pricing options designed to suit brands of all sizes. Pick the plan that fits your goals and start growing today.`,
+                                      }),
+                                    }),
+                                    className: `framer-1j5ffsl`,
+                                    fonts: [`Inter`],
+                                    verticalAlignment: `top`,
+                                    withExternalLayout: !0,
+                                  }),
+                                ],
+                              }),
+                            ],
+                          }),
+                        }),
+                        c(`div`, {
+                          className: `framer-v1xxjl`,
+                          "data-framer-name": `Overlay`,
+                        }),
+                        c(`div`, {
+                          className: `framer-1cuel9h`,
+                          "data-framer-name": `Overlay`,
+                        }),
+                      ],
+                    }),
+                    c(d.section, {
+                      className: `framer-1oidi6w`,
+                      "data-framer-name": `Pricing`,
+                      layout: P,
+                      children: c(`div`, {
+                        className: `framer-18h7sct`,
+                        "data-framer-name": `Container`,
+                        children: u(`div`, {
+                          className: `framer-ph8zit`,
+                          "data-framer-name": `Cards`,
+                          children: [
+                            c(M, {
+                              links: [
+                                {
+                                  href: { webPageId: `VS1gZwE1i` },
+                                  implicitPathVariables: void 0,
+                                },
+                                {
+                                  href: { webPageId: `VS1gZwE1i` },
+                                  implicitPathVariables: void 0,
+                                },
+                                {
+                                  href: { webPageId: `VS1gZwE1i` },
+                                  implicitPathVariables: void 0,
+                                },
+                              ],
+                              children: (e) =>
+                                c(N, {
+                                  breakpoint: D,
+                                  overrides: {
+                                    EHGA03dpT: {
+                                      width: `max((min(max(${_?.width || `100vw`} - 40px, 1px), 1440px) - 10px) / 2, 50px)`,
+                                      y:
+                                        (_?.y || 0) +
+                                        0 +
+                                        750 +
+                                        120 +
+                                        0 +
+                                        0 +
+                                        0 +
+                                        0,
+                                    },
+                                    nPXYRbDJ_: {
+                                      width: `max(min(${_?.width || `100vw`} - 40px, 1440px), 50px)`,
+                                      y:
+                                        (_?.y || 0) +
+                                        0 +
+                                        750 +
+                                        120 +
+                                        0 +
+                                        0 +
+                                        0 +
+                                        0 +
+                                        0,
+                                    },
+                                  },
+                                  children: c(E, {
+                                    height: 418,
+                                    width: `min(max((min(max(${_?.width || `100vw`} - 40px, 1px), 1440px) - 20px) / 3, 1px), 418px)`,
+                                    y: (_?.y || 0) + 0 + 750 + 120 + 0 + 0 + 0,
+                                    children: c(W, {
+                                      __framer__animate: { transition: G },
+                                      __framer__animateOnce: !0,
+                                      __framer__enter: J,
+                                      __framer__styleAppearEffectEnabled: !0,
+                                      __framer__threshold: 0,
+                                      __perspectiveFX: !1,
+                                      __targetOpacity: 1,
+                                      className: `framer-7v2tkd-container`,
+                                      nodeId: `oGRnDDyoL`,
+                                      rendersWithMotion: !0,
+                                      scopeId: `iMmW2B_8v`,
+                                      children: c(N, {
+                                        breakpoint: D,
+                                        overrides: {
+                                          EHGA03dpT: {
+                                            hw0DVzguE: e[1],
+                                            style: { width: `100%` },
+                                          },
+                                          nPXYRbDJ_: {
+                                            hw0DVzguE: e[2],
+                                            style: { width: `100%` },
+                                          },
+                                        },
+                                        children: c(I, {
+                                          BbX2UtdMD: `STARTER`,
+                                          BWKubQxce: `Monthly Performance Report\\`,
+                                          E0c0m_5kL: `Get Started`,
+                                          eSSv9ADol: `Social Media Setup`,
+                                          gR0qrwUvz: `199`,
+                                          height: `100%`,
+                                          hw0DVzguE: e[0],
+                                          id: `oGRnDDyoL`,
+                                          layoutId: `oGRnDDyoL`,
+                                          Ltkd0cqNx: `Perfect for small brands looking to establish a digital presence.`,
+                                          style: {
+                                            maxWidth: `100%`,
+                                            width: `100%`,
+                                          },
+                                          txtCuA6B9: `Logo & Visual Assets`,
+                                          UEVJ0g8HQ: `Brand Audit`,
+                                          variant: Y(`zmBAbBG8I`),
+                                          width: `100%`,
+                                        }),
+                                      }),
+                                    }),
+                                  }),
+                                }),
+                            }),
+                            c(M, {
+                              links: [
+                                {
+                                  href: { webPageId: `VS1gZwE1i` },
+                                  implicitPathVariables: void 0,
+                                },
+                                {
+                                  href: { webPageId: `VS1gZwE1i` },
+                                  implicitPathVariables: void 0,
+                                },
+                                {
+                                  href: { webPageId: `VS1gZwE1i` },
+                                  implicitPathVariables: void 0,
+                                },
+                              ],
+                              children: (e) =>
+                                c(N, {
+                                  breakpoint: D,
+                                  overrides: {
+                                    EHGA03dpT: {
+                                      width: `max((min(max(${_?.width || `100vw`} - 40px, 1px), 1440px) - 10px) / 2, 50px)`,
+                                      y:
+                                        (_?.y || 0) +
+                                        0 +
+                                        750 +
+                                        120 +
+                                        0 +
+                                        0 +
+                                        0 +
+                                        0,
+                                    },
+                                    nPXYRbDJ_: {
+                                      width: `max(min(${_?.width || `100vw`} - 40px, 1440px), 50px)`,
+                                      y:
+                                        (_?.y || 0) +
+                                        0 +
+                                        750 +
+                                        120 +
+                                        0 +
+                                        0 +
+                                        0 +
+                                        0 +
+                                        428,
+                                    },
+                                  },
+                                  children: c(E, {
+                                    height: 418,
+                                    width: `max((min(max(${_?.width || `100vw`} - 40px, 1px), 1440px) - 20px) / 3, 1px)`,
+                                    y: (_?.y || 0) + 0 + 750 + 120 + 0 + 0 + 0,
+                                    children: c(W, {
+                                      __framer__animate: { transition: X },
+                                      __framer__animateOnce: !0,
+                                      __framer__enter: J,
+                                      __framer__styleAppearEffectEnabled: !0,
+                                      __framer__threshold: 0,
+                                      __perspectiveFX: !1,
+                                      __targetOpacity: 1,
+                                      className: `framer-1mtyo3m-container`,
+                                      nodeId: `Yp0x8qdXC`,
+                                      rendersWithMotion: !0,
+                                      scopeId: `iMmW2B_8v`,
+                                      children: c(N, {
+                                        breakpoint: D,
+                                        overrides: {
+                                          EHGA03dpT: { hw0DVzguE: e[1] },
+                                          nPXYRbDJ_: { hw0DVzguE: e[2] },
+                                        },
+                                        children: c(I, {
+                                          BbX2UtdMD: `GROWTH`,
+                                          BWKubQxce: `Audience Insights Report`,
+                                          E0c0m_5kL: `Start Growing`,
+                                          eSSv9ADol: `Content Creation & Scheduling`,
+                                          gR0qrwUvz: `399`,
+                                          height: `100%`,
+                                          hw0DVzguE: e[0],
+                                          id: `Yp0x8qdXC`,
+                                          layoutId: `Yp0x8qdXC`,
+                                          Ltkd0cqNx: `Ideal for growing brands aiming for better engagement and measurable results.`,
+                                          style: { width: `100%` },
+                                          txtCuA6B9: `Paid Ads Management`,
+                                          UEVJ0g8HQ: `Campaign Strategy`,
+                                          variant: Y(`xIjEXZ2yG`),
+                                          width: `100%`,
+                                        }),
+                                      }),
+                                    }),
+                                  }),
+                                }),
+                            }),
+                            c(M, {
+                              links: [
+                                {
+                                  href: { webPageId: `VS1gZwE1i` },
+                                  implicitPathVariables: void 0,
+                                },
+                                {
+                                  href: { webPageId: `VS1gZwE1i` },
+                                  implicitPathVariables: void 0,
+                                },
+                                {
+                                  href: { webPageId: `VS1gZwE1i` },
+                                  implicitPathVariables: void 0,
+                                },
+                              ],
+                              children: (e) =>
+                                c(N, {
+                                  breakpoint: D,
+                                  overrides: {
+                                    EHGA03dpT: {
+                                      width: `calc(max((min(max(${_?.width || `100vw`} - 40px, 1px), 1440px) - 10px) / 2, 50px) * 2 + 10px)`,
+                                      y:
+                                        (_?.y || 0) +
+                                        0 +
+                                        750 +
+                                        120 +
+                                        0 +
+                                        0 +
+                                        0 +
+                                        428,
+                                    },
+                                    nPXYRbDJ_: {
+                                      width: `max(min(${_?.width || `100vw`} - 40px, 1440px), 50px)`,
+                                      y:
+                                        (_?.y || 0) +
+                                        0 +
+                                        750 +
+                                        120 +
+                                        0 +
+                                        0 +
+                                        0 +
+                                        0 +
+                                        856,
+                                    },
+                                  },
+                                  children: c(E, {
+                                    height: 418,
+                                    width: `min(max((min(max(${_?.width || `100vw`} - 40px, 1px), 1440px) - 20px) / 3, 1px), 418px)`,
+                                    y: (_?.y || 0) + 0 + 750 + 120 + 0 + 0 + 0,
+                                    children: c(W, {
+                                      __framer__animate: { transition: nt },
+                                      __framer__animateOnce: !0,
+                                      __framer__enter: J,
+                                      __framer__styleAppearEffectEnabled: !0,
+                                      __framer__threshold: 0,
+                                      __perspectiveFX: !1,
+                                      __targetOpacity: 1,
+                                      className: `framer-e85sx0-container`,
+                                      nodeId: `WZh05ZlRC`,
+                                      rendersWithMotion: !0,
+                                      scopeId: `iMmW2B_8v`,
+                                      children: c(N, {
+                                        breakpoint: D,
+                                        overrides: {
+                                          EHGA03dpT: {
+                                            hw0DVzguE: e[1],
+                                            style: { width: `100%` },
+                                          },
+                                          nPXYRbDJ_: {
+                                            hw0DVzguE: e[2],
+                                            style: { width: `100%` },
+                                          },
+                                        },
+                                        children: c(I, {
+                                          BbX2UtdMD: `PRO`,
+                                          BWKubQxce: `Monthly Strategy Consultation`,
+                                          E0c0m_5kL: `Go Pro`,
+                                          eSSv9ADol: `UI/UX Design & Optimization`,
+                                          gR0qrwUvz: `699`,
+                                          height: `100%`,
+                                          hw0DVzguE: e[0],
+                                          id: `WZh05ZlRC`,
+                                          layoutId: `WZh05ZlRC`,
+                                          Ltkd0cqNx: `For established brands seeking full-scale, performance-driven campaigns.`,
+                                          style: {
+                                            maxWidth: `100%`,
+                                            width: `100%`,
+                                          },
+                                          txtCuA6B9: `SEO & Analytics`,
+                                          UEVJ0g8HQ: `Full Digital Marketing Plan`,
+                                          variant: Y(`zmBAbBG8I`),
+                                          width: `100%`,
+                                        }),
+                                      }),
+                                    }),
+                                  }),
+                                }),
+                            }),
+                          ],
+                        }),
+                      }),
+                    }),
+                    c(d.section, {
+                      className: `framer-1jgw5ib`,
+                      "data-framer-name": `Comparison`,
+                      layout: P,
+                      children: u(`div`, {
+                        className: `framer-1n11c1s`,
+                        "data-framer-name": `Container`,
+                        children: [
+                          u(`div`, {
+                            className: `framer-1pzwwtd`,
+                            "data-framer-name": `Heading`,
+                            children: [
+                              c(N, {
+                                breakpoint: D,
+                                overrides: {
+                                  EHGA03dpT: {
+                                    y:
+                                      (_?.y || 0) +
+                                      0 +
+                                      1776 +
+                                      60 +
+                                      0 +
+                                      0 +
+                                      0 +
+                                      0,
+                                  },
+                                  nPXYRbDJ_: {
+                                    y:
+                                      (_?.y || 0) +
+                                      0 +
+                                      2204 +
+                                      60 +
+                                      0 +
+                                      0 +
+                                      0 +
+                                      0 +
+                                      0,
+                                  },
+                                },
+                                children: c(E, {
+                                  height: 20,
+                                  y:
+                                    (_?.y || 0) + 0 + 1348 + 60 + 0 + 0 + 0 + 0,
+                                  children: c(W, {
+                                    __framer__animate: { transition: it },
+                                    __framer__animateOnce: !0,
+                                    __framer__enter: rt,
+                                    __framer__styleAppearEffectEnabled: !0,
+                                    __framer__threshold: 0,
+                                    __perspectiveFX: !1,
+                                    __targetOpacity: 1,
+                                    className: `framer-15u8vgu-container`,
+                                    nodeId: `hvCfo_yYf`,
+                                    rendersWithMotion: !0,
+                                    scopeId: `iMmW2B_8v`,
+                                    children: c(F, {
+                                      GZXD4XDjD: `var(--token-18c0a90f-4c91-40d5-87bc-96696572c777, rgb(0, 0, 0))`,
+                                      height: `100%`,
+                                      id: `hvCfo_yYf`,
+                                      layoutId: `hvCfo_yYf`,
+                                      t9Ips89AM: `var(--token-06856072-b723-433b-af66-5e2af035f2ef, rgb(255, 33, 33))`,
+                                      width: `100%`,
+                                      wYgOcdV21: `compare`,
+                                    }),
+                                  }),
+                                }),
+                              }),
+                              c(y, {
+                                __fromCanvasComponent: !0,
+                                children: c(t, {
+                                  children: u(`h2`, {
+                                    className: `framer-styles-preset-w4n9ce`,
+                                    "data-styles-preset": `QQizO8D2m`,
+                                    dir: `auto`,
+                                    style: {
+                                      "--framer-text-alignment": `center`,
+                                    },
+                                    children: [
+                                      `Plan Comparison`,
+                                      c(`span`, {
+                                        style: {
+                                          "--framer-text-color": `var(--token-06856072-b723-433b-af66-5e2af035f2ef, rgb(255, 33, 33))`,
+                                        },
+                                        children: `*`,
+                                      }),
+                                    ],
+                                  }),
+                                }),
+                                className: `framer-ru722t`,
+                                effect: at,
+                                fonts: [`Inter`],
+                                verticalAlignment: `top`,
+                                withExternalLayout: !0,
+                              }),
+                            ],
+                          }),
+                          c(`div`, {
+                            className: `framer-1pzy03k`,
+                            "data-framer-name": `Feature-wrapper`,
+                            children: u(`div`, {
+                              className: `framer-z9q2u6`,
+                              "data-framer-name": `Features`,
+                              children: [
+                                u(We, {
+                                  __framer__animate: { transition: X },
+                                  __framer__animateOnce: !0,
+                                  __framer__enter: Z,
+                                  __framer__styleAppearEffectEnabled: !0,
+                                  __framer__threshold: 0.5,
+                                  __perspectiveFX: !1,
+                                  __targetOpacity: 1,
+                                  className: `framer-6k7d6`,
+                                  "data-framer-name": `Label`,
+                                  children: [
+                                    c(y, {
+                                      __fromCanvasComponent: !0,
+                                      children: c(t, {
+                                        children: c(`p`, {
+                                          className: `framer-styles-preset-rn7xf9`,
+                                          "data-styles-preset": `uyfn5rCXc`,
+                                          dir: `auto`,
+                                          style: {
+                                            "--framer-text-color": `var(--token-962dbf23-cea4-4b3f-b44d-d5595ab68b22, rgb(255, 255, 255))`,
+                                          },
+                                          children: `Deliverable`,
+                                        }),
+                                      }),
+                                      className: `framer-6fu3rp`,
+                                      fonts: [`Inter`],
+                                      verticalAlignment: `top`,
+                                      withExternalLayout: !0,
+                                    }),
+                                    c(y, {
+                                      __fromCanvasComponent: !0,
+                                      children: c(t, {
+                                        children: c(`p`, {
+                                          className: `framer-styles-preset-rn7xf9`,
+                                          "data-styles-preset": `uyfn5rCXc`,
+                                          dir: `auto`,
+                                          style: {
+                                            "--framer-text-color": `var(--token-962dbf23-cea4-4b3f-b44d-d5595ab68b22, rgb(255, 255, 255))`,
+                                          },
+                                          children: `starter`,
+                                        }),
+                                      }),
+                                      className: `framer-m1uo1g`,
+                                      fonts: [`Inter`],
+                                      verticalAlignment: `top`,
+                                      withExternalLayout: !0,
+                                    }),
+                                    c(y, {
+                                      __fromCanvasComponent: !0,
+                                      children: c(t, {
+                                        children: c(`p`, {
+                                          className: `framer-styles-preset-rn7xf9`,
+                                          "data-styles-preset": `uyfn5rCXc`,
+                                          dir: `auto`,
+                                          style: {
+                                            "--framer-text-color": `var(--token-962dbf23-cea4-4b3f-b44d-d5595ab68b22, rgb(255, 255, 255))`,
+                                          },
+                                          children: `growth`,
+                                        }),
+                                      }),
+                                      className: `framer-1875ntz`,
+                                      fonts: [`Inter`],
+                                      verticalAlignment: `top`,
+                                      withExternalLayout: !0,
+                                    }),
+                                    c(y, {
+                                      __fromCanvasComponent: !0,
+                                      children: c(t, {
+                                        children: c(`p`, {
+                                          className: `framer-styles-preset-rn7xf9`,
+                                          "data-styles-preset": `uyfn5rCXc`,
+                                          dir: `auto`,
+                                          style: {
+                                            "--framer-text-color": `var(--token-962dbf23-cea4-4b3f-b44d-d5595ab68b22, rgb(255, 255, 255))`,
+                                          },
+                                          children: `pro`,
+                                        }),
+                                      }),
+                                      className: `framer-r34qgg`,
+                                      fonts: [`Inter`],
+                                      verticalAlignment: `top`,
+                                      withExternalLayout: !0,
+                                    }),
+                                  ],
+                                }),
+                                c(N, {
+                                  breakpoint: D,
+                                  overrides: {
+                                    EHGA03dpT: {
+                                      y:
+                                        (_?.y || 0) +
+                                        0 +
+                                        1776 +
+                                        60 +
+                                        0 +
+                                        180 +
+                                        0 +
+                                        0 +
+                                        57.92,
+                                    },
+                                    nPXYRbDJ_: {
+                                      width: `1100px`,
+                                      y:
+                                        (_?.y || 0) +
+                                        0 +
+                                        2204 +
+                                        60 +
+                                        0 +
+                                        0 +
+                                        180 +
+                                        0 +
+                                        0 +
+                                        57.92,
+                                    },
+                                  },
+                                  children: c(E, {
+                                    height: 200,
+                                    width: `max(min(max(${_?.width || `100vw`} - 40px, 1px), 1440px), 1px)`,
+                                    y:
+                                      (_?.y || 0) +
+                                      0 +
+                                      1348 +
+                                      60 +
+                                      0 +
+                                      180 +
+                                      0 +
+                                      0 +
+                                      57.92,
+                                    children: c(W, {
+                                      __framer__animate: { transition: X },
+                                      __framer__animateOnce: !0,
+                                      __framer__enter: Z,
+                                      __framer__styleAppearEffectEnabled: !0,
+                                      __framer__threshold: 0.5,
+                                      __perspectiveFX: !1,
+                                      __targetOpacity: 1,
+                                      className: `framer-kyp64d-container`,
+                                      nodeId: `IQEClyCnb`,
+                                      rendersWithMotion: !0,
+                                      scopeId: `iMmW2B_8v`,
+                                      children: c(N, {
+                                        breakpoint: D,
+                                        overrides: {
+                                          EHGA03dpT: {
+                                            variant: Y(`xaczGc8Sh`),
+                                          },
+                                        },
+                                        children: c(U, {
+                                          ayKt_gD6Y: `full`,
+                                          height: `100%`,
+                                          id: `IQEClyCnb`,
+                                          layoutId: `IQEClyCnb`,
+                                          nS_do7WL1: `Brand Identity System`,
+                                          Ppcbs5bCy: `basic`,
+                                          SKoKH4aiq: `advanced`,
+                                          style: { width: `100%` },
+                                          variant: Y(`GCkGelCLr`),
+                                          VsaafCrxE: {
+                                            borderColor: `var(--token-c8f555ca-85f2-45bb-95da-99cc04a2af76, rgb(149, 149, 149))`,
+                                            borderStyle: `dashed`,
+                                            borderWidth: 1,
+                                          },
+                                          width: `100%`,
+                                          wkeMEro6z: `0px`,
+                                        }),
+                                      }),
+                                    }),
+                                  }),
+                                }),
+                                c(N, {
+                                  breakpoint: D,
+                                  overrides: {
+                                    EHGA03dpT: {
+                                      y:
+                                        (_?.y || 0) +
+                                        0 +
+                                        1776 +
+                                        60 +
+                                        0 +
+                                        180 +
+                                        0 +
+                                        0 +
+                                        257.92,
+                                    },
+                                    nPXYRbDJ_: {
+                                      width: `1100px`,
+                                      y:
+                                        (_?.y || 0) +
+                                        0 +
+                                        2204 +
+                                        60 +
+                                        0 +
+                                        0 +
+                                        180 +
+                                        0 +
+                                        0 +
+                                        257.92,
+                                    },
+                                  },
+                                  children: c(E, {
+                                    height: 200,
+                                    width: `max(min(max(${_?.width || `100vw`} - 40px, 1px), 1440px), 1px)`,
+                                    y:
+                                      (_?.y || 0) +
+                                      0 +
+                                      1348 +
+                                      60 +
+                                      0 +
+                                      180 +
+                                      0 +
+                                      0 +
+                                      257.92,
+                                    children: c(W, {
+                                      __framer__animate: { transition: X },
+                                      __framer__animateOnce: !0,
+                                      __framer__enter: Z,
+                                      __framer__styleAppearEffectEnabled: !0,
+                                      __framer__threshold: 0.5,
+                                      __perspectiveFX: !1,
+                                      __targetOpacity: 1,
+                                      className: `framer-10sy4ou-container`,
+                                      nodeId: `PVTrv5qmz`,
+                                      rendersWithMotion: !0,
+                                      scopeId: `iMmW2B_8v`,
+                                      children: c(N, {
+                                        breakpoint: D,
+                                        overrides: {
+                                          EHGA03dpT: {
+                                            variant: Y(`xaczGc8Sh`),
+                                          },
+                                        },
+                                        children: c(U, {
+                                          ayKt_gD6Y: `Multi-Page`,
+                                          height: `100%`,
+                                          id: `PVTrv5qmz`,
+                                          layoutId: `PVTrv5qmz`,
+                                          nS_do7WL1: `Web UI Design`,
+                                          Ppcbs5bCy: `Single Page`,
+                                          SKoKH4aiq: `Custom + Product`,
+                                          style: { width: `100%` },
+                                          variant: Y(`GCkGelCLr`),
+                                          VsaafCrxE: {
+                                            borderBottomWidth: 1,
+                                            borderColor: `var(--token-c8f555ca-85f2-45bb-95da-99cc04a2af76, rgb(149, 149, 149))`,
+                                            borderLeftWidth: 1,
+                                            borderRightWidth: 1,
+                                            borderStyle: `dashed`,
+                                            borderTopWidth: 0,
+                                          },
+                                          width: `100%`,
+                                          wkeMEro6z: `0px`,
+                                        }),
+                                      }),
+                                    }),
+                                  }),
+                                }),
+                                c(N, {
+                                  breakpoint: D,
+                                  overrides: {
+                                    EHGA03dpT: {
+                                      y:
+                                        (_?.y || 0) +
+                                        0 +
+                                        1776 +
+                                        60 +
+                                        0 +
+                                        180 +
+                                        0 +
+                                        0 +
+                                        457.92,
+                                    },
+                                    nPXYRbDJ_: {
+                                      width: `1100px`,
+                                      y:
+                                        (_?.y || 0) +
+                                        0 +
+                                        2204 +
+                                        60 +
+                                        0 +
+                                        0 +
+                                        180 +
+                                        0 +
+                                        0 +
+                                        457.92,
+                                    },
+                                  },
+                                  children: c(E, {
+                                    height: 200,
+                                    width: `max(min(max(${_?.width || `100vw`} - 40px, 1px), 1440px), 1px)`,
+                                    y:
+                                      (_?.y || 0) +
+                                      0 +
+                                      1348 +
+                                      60 +
+                                      0 +
+                                      180 +
+                                      0 +
+                                      0 +
+                                      457.92,
+                                    children: c(W, {
+                                      __framer__animate: { transition: X },
+                                      __framer__animateOnce: !0,
+                                      __framer__enter: Z,
+                                      __framer__styleAppearEffectEnabled: !0,
+                                      __framer__threshold: 0.5,
+                                      __perspectiveFX: !1,
+                                      __targetOpacity: 1,
+                                      className: `framer-v0zgtr-container`,
+                                      nodeId: `iAv6d8qUS`,
+                                      rendersWithMotion: !0,
+                                      scopeId: `iMmW2B_8v`,
+                                      children: c(N, {
+                                        breakpoint: D,
+                                        overrides: {
+                                          EHGA03dpT: {
+                                            variant: Y(`xaczGc8Sh`),
+                                          },
+                                        },
+                                        children: c(U, {
+                                          ayKt_gD6Y: `Core Marketing`,
+                                          height: `100%`,
+                                          id: `iAv6d8qUS`,
+                                          layoutId: `iAv6d8qUS`,
+                                          nS_do7WL1: `Design Assets`,
+                                          Ppcbs5bCy: `Limited Set`,
+                                          SKoKH4aiq: `Full Suite`,
+                                          style: { width: `100%` },
+                                          variant: Y(`GCkGelCLr`),
+                                          VsaafCrxE: {
+                                            borderBottomWidth: 1,
+                                            borderColor: `var(--token-c8f555ca-85f2-45bb-95da-99cc04a2af76, rgb(149, 149, 149))`,
+                                            borderLeftWidth: 1,
+                                            borderRightWidth: 1,
+                                            borderStyle: `dashed`,
+                                            borderTopWidth: 0,
+                                          },
+                                          width: `100%`,
+                                          wkeMEro6z: `0px`,
+                                        }),
+                                      }),
+                                    }),
+                                  }),
+                                }),
+                                c(N, {
+                                  breakpoint: D,
+                                  overrides: {
+                                    EHGA03dpT: {
+                                      y:
+                                        (_?.y || 0) +
+                                        0 +
+                                        1776 +
+                                        60 +
+                                        0 +
+                                        180 +
+                                        0 +
+                                        0 +
+                                        657.92,
+                                    },
+                                    nPXYRbDJ_: {
+                                      width: `1100px`,
+                                      y:
+                                        (_?.y || 0) +
+                                        0 +
+                                        2204 +
+                                        60 +
+                                        0 +
+                                        0 +
+                                        180 +
+                                        0 +
+                                        0 +
+                                        657.92,
+                                    },
+                                  },
+                                  children: c(E, {
+                                    height: 200,
+                                    width: `max(min(max(${_?.width || `100vw`} - 40px, 1px), 1440px), 1px)`,
+                                    y:
+                                      (_?.y || 0) +
+                                      0 +
+                                      1348 +
+                                      60 +
+                                      0 +
+                                      180 +
+                                      0 +
+                                      0 +
+                                      657.92,
+                                    children: c(W, {
+                                      __framer__animate: { transition: X },
+                                      __framer__animateOnce: !0,
+                                      __framer__enter: Z,
+                                      __framer__styleAppearEffectEnabled: !0,
+                                      __framer__threshold: 0.5,
+                                      __perspectiveFX: !1,
+                                      __targetOpacity: 1,
+                                      className: `framer-eabesb-container`,
+                                      nodeId: `uQ7uFktlz`,
+                                      rendersWithMotion: !0,
+                                      scopeId: `iMmW2B_8v`,
+                                      children: c(N, {
+                                        breakpoint: D,
+                                        overrides: {
+                                          EHGA03dpT: {
+                                            variant: Y(`xaczGc8Sh`),
+                                          },
+                                        },
+                                        children: c(U, {
+                                          ayKt_gD6Y: `Structured`,
+                                          height: `100%`,
+                                          id: `uQ7uFktlz`,
+                                          layoutId: `uQ7uFktlz`,
+                                          nS_do7WL1: `Feedback Rounds`,
+                                          Ppcbs5bCy: `Two`,
+                                          SKoKH4aiq: `Unlimited Within Scope`,
+                                          style: { width: `100%` },
+                                          variant: Y(`GCkGelCLr`),
+                                          VsaafCrxE: {
+                                            borderBottomWidth: 1,
+                                            borderColor: `var(--token-c8f555ca-85f2-45bb-95da-99cc04a2af76, rgb(149, 149, 149))`,
+                                            borderLeftWidth: 1,
+                                            borderRightWidth: 1,
+                                            borderStyle: `dashed`,
+                                            borderTopWidth: 0,
+                                          },
+                                          width: `100%`,
+                                          wkeMEro6z: `0px`,
+                                        }),
+                                      }),
+                                    }),
+                                  }),
+                                }),
+                                c(N, {
+                                  breakpoint: D,
+                                  overrides: {
+                                    EHGA03dpT: {
+                                      y:
+                                        (_?.y || 0) +
+                                        0 +
+                                        1776 +
+                                        60 +
+                                        0 +
+                                        180 +
+                                        0 +
+                                        0 +
+                                        857.92,
+                                    },
+                                    nPXYRbDJ_: {
+                                      width: `1100px`,
+                                      y:
+                                        (_?.y || 0) +
+                                        0 +
+                                        2204 +
+                                        60 +
+                                        0 +
+                                        0 +
+                                        180 +
+                                        0 +
+                                        0 +
+                                        857.92,
+                                    },
+                                  },
+                                  children: c(E, {
+                                    height: 200,
+                                    width: `max(min(max(${_?.width || `100vw`} - 40px, 1px), 1440px), 1px)`,
+                                    y:
+                                      (_?.y || 0) +
+                                      0 +
+                                      1348 +
+                                      60 +
+                                      0 +
+                                      180 +
+                                      0 +
+                                      0 +
+                                      857.92,
+                                    children: c(W, {
+                                      __framer__animate: { transition: X },
+                                      __framer__animateOnce: !0,
+                                      __framer__enter: Z,
+                                      __framer__styleAppearEffectEnabled: !0,
+                                      __framer__threshold: 0.5,
+                                      __perspectiveFX: !1,
+                                      __targetOpacity: 1,
+                                      className: `framer-o54fev-container`,
+                                      nodeId: `xomV64z2o`,
+                                      rendersWithMotion: !0,
+                                      scopeId: `iMmW2B_8v`,
+                                      children: c(N, {
+                                        breakpoint: D,
+                                        overrides: {
+                                          EHGA03dpT: {
+                                            variant: Y(`xaczGc8Sh`),
+                                          },
+                                        },
+                                        children: c(U, {
+                                          ayKt_gD6Y: `Priority`,
+                                          height: `100%`,
+                                          id: `xomV64z2o`,
+                                          layoutId: `xomV64z2o`,
+                                          nS_do7WL1: `Timeline Support`,
+                                          Ppcbs5bCy: `Standard`,
+                                          SKoKH4aiq: `Fast-Track`,
+                                          style: { width: `100%` },
+                                          variant: Y(`GCkGelCLr`),
+                                          VsaafCrxE: {
+                                            borderBottomWidth: 1,
+                                            borderColor: `var(--token-c8f555ca-85f2-45bb-95da-99cc04a2af76, rgb(149, 149, 149))`,
+                                            borderLeftWidth: 1,
+                                            borderRightWidth: 1,
+                                            borderStyle: `dashed`,
+                                            borderTopWidth: 0,
+                                          },
+                                          width: `100%`,
+                                          wkeMEro6z: `0px`,
+                                        }),
+                                      }),
+                                    }),
+                                  }),
+                                }),
+                                c(N, {
+                                  breakpoint: D,
+                                  overrides: {
+                                    EHGA03dpT: {
+                                      y:
+                                        (_?.y || 0) +
+                                        0 +
+                                        1776 +
+                                        60 +
+                                        0 +
+                                        180 +
+                                        0 +
+                                        0 +
+                                        1057.92,
+                                    },
+                                    nPXYRbDJ_: {
+                                      width: `1100px`,
+                                      y:
+                                        (_?.y || 0) +
+                                        0 +
+                                        2204 +
+                                        60 +
+                                        0 +
+                                        0 +
+                                        180 +
+                                        0 +
+                                        0 +
+                                        1057.92,
+                                    },
+                                  },
+                                  children: c(E, {
+                                    height: 200,
+                                    width: `max(min(max(${_?.width || `100vw`} - 40px, 1px), 1440px), 1px)`,
+                                    y:
+                                      (_?.y || 0) +
+                                      0 +
+                                      1348 +
+                                      60 +
+                                      0 +
+                                      180 +
+                                      0 +
+                                      0 +
+                                      1057.92,
+                                    children: c(W, {
+                                      __framer__animate: { transition: X },
+                                      __framer__animateOnce: !0,
+                                      __framer__enter: Z,
+                                      __framer__styleAppearEffectEnabled: !0,
+                                      __framer__threshold: 0.5,
+                                      __perspectiveFX: !1,
+                                      __targetOpacity: 1,
+                                      className: `framer-yuaf7s-container`,
+                                      nodeId: `QrubBcXMQ`,
+                                      rendersWithMotion: !0,
+                                      scopeId: `iMmW2B_8v`,
+                                      children: c(N, {
+                                        breakpoint: D,
+                                        overrides: {
+                                          EHGA03dpT: {
+                                            variant: Y(`xaczGc8Sh`),
+                                          },
+                                        },
+                                        children: c(U, {
+                                          ayKt_gD6Y: `Email + Calls`,
+                                          height: `100%`,
+                                          id: `QrubBcXMQ`,
+                                          layoutId: `QrubBcXMQ`,
+                                          nS_do7WL1: `Communication`,
+                                          Ppcbs5bCy: `Email Only`,
+                                          SKoKH4aiq: `Dedicated Channel`,
+                                          style: { width: `100%` },
+                                          variant: Y(`GCkGelCLr`),
+                                          VsaafCrxE: {
+                                            borderBottomWidth: 1,
+                                            borderColor: `var(--token-c8f555ca-85f2-45bb-95da-99cc04a2af76, rgb(149, 149, 149))`,
+                                            borderLeftWidth: 1,
+                                            borderRightWidth: 1,
+                                            borderStyle: `dashed`,
+                                            borderTopWidth: 0,
+                                          },
+                                          width: `100%`,
+                                          wkeMEro6z: `0px`,
+                                        }),
+                                      }),
+                                    }),
+                                  }),
+                                }),
+                                c(N, {
+                                  breakpoint: D,
+                                  overrides: {
+                                    EHGA03dpT: {
+                                      y:
+                                        (_?.y || 0) +
+                                        0 +
+                                        1776 +
+                                        60 +
+                                        0 +
+                                        180 +
+                                        0 +
+                                        0 +
+                                        1257.92,
+                                    },
+                                    nPXYRbDJ_: {
+                                      width: `1100px`,
+                                      y:
+                                        (_?.y || 0) +
+                                        0 +
+                                        2204 +
+                                        60 +
+                                        0 +
+                                        0 +
+                                        180 +
+                                        0 +
+                                        0 +
+                                        1257.92,
+                                    },
+                                  },
+                                  children: c(E, {
+                                    height: 200,
+                                    width: `max(min(max(${_?.width || `100vw`} - 40px, 1px), 1440px), 1px)`,
+                                    y:
+                                      (_?.y || 0) +
+                                      0 +
+                                      1348 +
+                                      60 +
+                                      0 +
+                                      180 +
+                                      0 +
+                                      0 +
+                                      1257.92,
+                                    children: c(W, {
+                                      __framer__animate: { transition: X },
+                                      __framer__animateOnce: !0,
+                                      __framer__enter: Z,
+                                      __framer__styleAppearEffectEnabled: !0,
+                                      __framer__threshold: 0.5,
+                                      __perspectiveFX: !1,
+                                      __targetOpacity: 1,
+                                      className: `framer-b8d1wu-container`,
+                                      nodeId: `BJ1GN5qeM`,
+                                      rendersWithMotion: !0,
+                                      scopeId: `iMmW2B_8v`,
+                                      children: c(N, {
+                                        breakpoint: D,
+                                        overrides: {
+                                          EHGA03dpT: {
+                                            variant: Y(`xaczGc8Sh`),
+                                          },
+                                        },
+                                        children: c(U, {
+                                          ayKt_gD6Y: `Standard`,
+                                          height: `100%`,
+                                          id: `BJ1GN5qeM`,
+                                          layoutId: `BJ1GN5qeM`,
+                                          nS_do7WL1: `Documentation`,
+                                          Ppcbs5bCy: `Light`,
+                                          SKoKH4aiq: `Full Design System`,
+                                          style: { width: `100%` },
+                                          variant: Y(`GCkGelCLr`),
+                                          VsaafCrxE: {
+                                            borderBottomWidth: 1,
+                                            borderColor: `var(--token-c8f555ca-85f2-45bb-95da-99cc04a2af76, rgb(149, 149, 149))`,
+                                            borderLeftWidth: 1,
+                                            borderRightWidth: 1,
+                                            borderStyle: `dashed`,
+                                            borderTopWidth: 0,
+                                          },
+                                          width: `100%`,
+                                          wkeMEro6z: `0px`,
+                                        }),
+                                      }),
+                                    }),
+                                  }),
+                                }),
+                                c(N, {
+                                  breakpoint: D,
+                                  overrides: {
+                                    EHGA03dpT: {
+                                      y:
+                                        (_?.y || 0) +
+                                        0 +
+                                        1776 +
+                                        60 +
+                                        0 +
+                                        180 +
+                                        0 +
+                                        0 +
+                                        1457.92,
+                                    },
+                                    nPXYRbDJ_: {
+                                      width: `1100px`,
+                                      y:
+                                        (_?.y || 0) +
+                                        0 +
+                                        2204 +
+                                        60 +
+                                        0 +
+                                        0 +
+                                        180 +
+                                        0 +
+                                        0 +
+                                        1457.92,
+                                    },
+                                  },
+                                  children: c(E, {
+                                    height: 200,
+                                    width: `max(min(max(${_?.width || `100vw`} - 40px, 1px), 1440px), 1px)`,
+                                    y:
+                                      (_?.y || 0) +
+                                      0 +
+                                      1348 +
+                                      60 +
+                                      0 +
+                                      180 +
+                                      0 +
+                                      0 +
+                                      1457.92,
+                                    children: c(W, {
+                                      __framer__animate: { transition: X },
+                                      __framer__animateOnce: !0,
+                                      __framer__enter: Z,
+                                      __framer__styleAppearEffectEnabled: !0,
+                                      __framer__threshold: 0.5,
+                                      __perspectiveFX: !1,
+                                      __targetOpacity: 1,
+                                      className: `framer-13r17x-container`,
+                                      nodeId: `bFSoYaWpi`,
+                                      rendersWithMotion: !0,
+                                      scopeId: `iMmW2B_8v`,
+                                      children: c(N, {
+                                        breakpoint: D,
+                                        overrides: {
+                                          EHGA03dpT: {
+                                            variant: Y(`xaczGc8Sh`),
+                                          },
+                                        },
+                                        children: c(U, {
+                                          ayKt_gD6Y: `Optional`,
+                                          height: `100%`,
+                                          id: `bFSoYaWpi`,
+                                          layoutId: `bFSoYaWpi`,
+                                          nS_do7WL1: `Ongoing Support`,
+                                          Ppcbs5bCy: `None`,
+                                          SKoKH4aiq: `Included`,
+                                          style: { width: `100%` },
+                                          variant: Y(`GCkGelCLr`),
+                                          VsaafCrxE: {
+                                            borderBottomWidth: 1,
+                                            borderColor: `var(--token-c8f555ca-85f2-45bb-95da-99cc04a2af76, rgb(149, 149, 149))`,
+                                            borderLeftWidth: 1,
+                                            borderRightWidth: 1,
+                                            borderStyle: `dashed`,
+                                            borderTopWidth: 0,
+                                          },
+                                          width: `100%`,
+                                          wkeMEro6z: `0px 0px 8px 8px`,
+                                        }),
+                                      }),
+                                    }),
+                                  }),
+                                }),
+                              ],
+                            }),
+                          }),
+                        ],
+                      }),
+                    }),
+                  ],
+                }),
+                c(`div`, { id: `overlay` }),
+              ],
+            }),
+          })
+        );
+      }),
+      [
+        `@supports (aspect-ratio: 1) { body { --framer-aspect-ratio-supported: auto; } }`,
+        `.framer-J1XvW.framer-1okbvv7, .framer-J1XvW .framer-1okbvv7 { display: block; }`,
+        `.framer-J1XvW.framer-kdj946 { align-content: center; align-items: center; background-color: var(--token-962dbf23-cea4-4b3f-b44d-d5595ab68b22, #ffffff); display: flex; flex-direction: column; flex-wrap: nowrap; gap: 0px; height: 1000px; justify-content: flex-start; overflow: var(--overflow-clip-fallback, clip); padding: 0px; position: relative; width: 1200px; }`,
+        `.framer-J1XvW .framer-1la93f1-container { flex: none; height: auto; position: relative; width: auto; z-index: 1; }`,
+        `.framer-J1XvW .framer-1wsyfck { align-content: flex-end; align-items: flex-end; display: flex; flex: none; flex-direction: row; flex-wrap: nowrap; gap: 10px; height: min-content; justify-content: center; min-height: 550px; overflow: hidden; padding: 5px; position: relative; width: 100%; z-index: 2; }`,
+        `.framer-J1XvW .framer-g2yvsd { align-content: center; align-items: center; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px; border-top-left-radius: 20px; border-top-right-radius: 20px; bottom: 5px; display: flex; flex: none; flex-direction: row; flex-wrap: nowrap; gap: 0px; justify-content: center; left: 5px; overflow: hidden; padding: 0px; position: absolute; right: 5px; top: 5px; will-change: var(--framer-will-change-override, transform); }`,
+        `.framer-J1XvW .framer-14992rt { border-bottom-left-radius: 20px; border-bottom-right-radius: 20px; border-top-left-radius: 20px; border-top-right-radius: 20px; bottom: 0px; flex: none; left: 0px; overflow: var(--overflow-clip-fallback, clip); position: absolute; right: 0px; top: 0px; will-change: var(--framer-will-change-override, transform); z-index: 1; }`,
+        `.framer-J1XvW .framer-3z2owj { align-content: flex-end; align-items: flex-end; display: flex; flex: 1 0 0px; flex-direction: row; flex-wrap: nowrap; gap: 10px; height: min-content; justify-content: center; max-width: 1440px; overflow: visible; padding: 0px 20px 60px 20px; position: relative; width: 1px; z-index: 2; }`,
+        `.framer-J1XvW .framer-loqwft { align-content: center; align-items: center; display: flex; flex: 1 0 0px; flex-direction: column; flex-wrap: nowrap; gap: 113px; height: min-content; justify-content: center; overflow: visible; padding: 0px; position: relative; width: 1px; }`,
+        `.framer-J1XvW .framer-rdol63 { display: grid; flex: none; gap: 0px; grid-auto-rows: min-content; grid-template-columns: repeat(4, minmax(50px, 1fr)); grid-template-rows: repeat(1, min-content); height: min-content; justify-content: center; overflow: visible; padding: 0px; position: relative; width: 100%; }`,
+        `.framer-J1XvW .framer-1m70apb-container { align-self: start; flex: none; height: auto; justify-self: start; position: relative; width: 100%; }`,
+        `.framer-J1XvW .framer-rb97xg { display: grid; flex: none; gap: 20px; grid-auto-rows: min-content; grid-template-columns: repeat(2, minmax(50px, 1fr)); grid-template-rows: repeat(1, min-content); height: min-content; justify-content: center; overflow: visible; padding: 0px; position: relative; width: 100%; }`,
+        `.framer-J1XvW .framer-jimlsj { --framer-link-text-color: #0099ff; --framer-link-text-decoration: underline; align-self: start; flex: none; grid-column: span 2; height: auto; justify-self: start; max-width: 563px; position: relative; white-space: pre-wrap; width: 100%; word-break: break-word; word-wrap: break-word; }`,
+        `.framer-J1XvW .framer-1j5ffsl { --framer-link-text-color: #0099ff; --framer-link-text-decoration: underline; align-self: start; flex: none; height: auto; justify-self: start; max-width: 485px; position: relative; white-space: pre-wrap; width: 100%; word-break: break-word; word-wrap: break-word; }`,
+        `.framer-J1XvW .framer-v1xxjl, .framer-J1XvW .framer-1cuel9h { background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%); border-bottom-left-radius: 20px; border-bottom-right-radius: 20px; bottom: 5px; flex: none; height: 189px; left: 5px; overflow: var(--overflow-clip-fallback, clip); position: absolute; right: 5px; will-change: var(--framer-will-change-override, transform); z-index: 1; }`,
+        `.framer-J1XvW .framer-1oidi6w { align-content: center; align-items: center; display: flex; flex: none; flex-direction: row; flex-wrap: nowrap; gap: 10px; height: min-content; justify-content: center; overflow: var(--overflow-clip-fallback, clip); padding: 120px 20px 60px 20px; position: relative; width: 100%; z-index: 2; }`,
+        `.framer-J1XvW .framer-18h7sct, .framer-J1XvW .framer-1n11c1s { align-content: center; align-items: center; display: flex; flex: 1 0 0px; flex-direction: column; flex-wrap: nowrap; gap: 60px; height: min-content; justify-content: center; max-width: 1440px; overflow: visible; padding: 0px; position: relative; width: 1px; z-index: 1; }`,
+        `.framer-J1XvW .framer-ph8zit, .framer-J1XvW .framer-1pzy03k { align-content: center; align-items: center; display: flex; flex: none; flex-direction: row; flex-wrap: nowrap; gap: 10px; height: min-content; justify-content: center; overflow: visible; padding: 0px; position: relative; width: 100%; }`,
+        `.framer-J1XvW .framer-7v2tkd-container, .framer-J1XvW .framer-e85sx0-container { flex: 1 0 0px; height: auto; max-width: 418px; position: relative; width: 1px; }`,
+        `.framer-J1XvW .framer-1mtyo3m-container { flex: 1 0 0px; height: auto; position: relative; width: 1px; }`,
+        `.framer-J1XvW .framer-1jgw5ib { align-content: center; align-items: center; display: flex; flex: none; flex-direction: row; flex-wrap: nowrap; gap: 10px; height: min-content; justify-content: center; overflow: var(--overflow-clip-fallback, clip); padding: 60px 20px 120px 20px; position: relative; width: 100%; z-index: 2; }`,
+        `.framer-J1XvW .framer-1pzwwtd { align-content: center; align-items: center; display: flex; flex: none; flex-direction: column; flex-wrap: nowrap; gap: 20px; height: min-content; justify-content: center; max-width: 770px; overflow: visible; padding: 0px; position: relative; width: 100%; }`,
+        `.framer-J1XvW .framer-15u8vgu-container { flex: none; height: auto; position: relative; width: auto; }`,
+        `.framer-J1XvW .framer-ru722t { --framer-link-text-color: #0099ff; --framer-link-text-decoration: underline; flex: none; height: auto; position: relative; white-space: pre-wrap; width: 100%; word-break: break-word; word-wrap: break-word; }`,
+        `.framer-J1XvW .framer-z9q2u6 { align-content: center; align-items: center; display: flex; flex: 1 0 0px; flex-direction: column; flex-wrap: nowrap; gap: 0px; height: min-content; justify-content: center; overflow: visible; padding: 0px; position: relative; width: 1px; }`,
+        `.framer-J1XvW .framer-6k7d6 { background-color: var(--token-18c0a90f-4c91-40d5-87bc-96696572c777, #000000); border-top-left-radius: 8px; border-top-right-radius: 8px; display: grid; flex: none; gap: 10px 0px; grid-auto-rows: min-content; grid-template-columns: repeat(4, minmax(50px, 1fr)); grid-template-rows: repeat(1, min-content); height: min-content; justify-content: center; overflow: var(--overflow-clip-fallback, clip); padding: 20px; position: relative; width: 100%; will-change: var(--framer-will-change-override, transform); }`,
+        `.framer-J1XvW .framer-6fu3rp, .framer-J1XvW .framer-m1uo1g, .framer-J1XvW .framer-1875ntz, .framer-J1XvW .framer-r34qgg { --framer-link-text-color: #0099ff; --framer-link-text-decoration: underline; align-self: start; flex: none; height: auto; justify-self: start; position: relative; white-space: pre; width: 100%; }`,
+        `.framer-J1XvW .framer-kyp64d-container, .framer-J1XvW .framer-10sy4ou-container, .framer-J1XvW .framer-v0zgtr-container, .framer-J1XvW .framer-eabesb-container, .framer-J1XvW .framer-o54fev-container, .framer-J1XvW .framer-yuaf7s-container, .framer-J1XvW .framer-b8d1wu-container, .framer-J1XvW .framer-13r17x-container { flex: none; height: auto; position: relative; width: 100%; }`,
+        ..._e,
+        ...se,
+        ...Ee,
+        `@media (min-width: 810px) and (max-width: 1199.98px) { .framer-J1XvW.framer-kdj946 { width: 810px; } .framer-J1XvW .framer-3z2owj { padding: 0px 16px 60px 16px; } .framer-J1XvW .framer-ph8zit { align-content: unset; align-items: unset; display: grid; grid-auto-rows: min-content; grid-template-columns: repeat(2, minmax(50px, 1fr)); grid-template-rows: repeat(2, min-content); } .framer-J1XvW .framer-7v2tkd-container { align-self: start; flex: none; justify-self: start; max-width: unset; width: 100%; } .framer-J1XvW .framer-1mtyo3m-container { align-self: start; flex: none; justify-self: start; width: 100%; } .framer-J1XvW .framer-e85sx0-container { align-self: start; flex: none; grid-column: 1 / -1; justify-self: start; max-width: unset; width: 100%; } .framer-J1XvW .framer-6k7d6 { grid-template-columns: repeat(5, minmax(50px, 1fr)); } .framer-J1XvW .framer-6fu3rp { grid-column: span 2; }}`,
+        `@media (max-width: 809.98px) { .framer-J1XvW.framer-kdj946 { width: 390px; } .framer-J1XvW .framer-3z2owj { padding: 0px 16px 60px 16px; } .framer-J1XvW .framer-1j5ffsl { grid-column: 1 / -1; } .framer-J1XvW .framer-1oidi6w, .framer-J1XvW .framer-1jgw5ib { flex-direction: column; } .framer-J1XvW .framer-18h7sct, .framer-J1XvW .framer-1n11c1s { flex: none; width: 100%; } .framer-J1XvW .framer-ph8zit { align-content: unset; align-items: unset; display: grid; grid-auto-rows: min-content; grid-template-columns: repeat(1, minmax(50px, 1fr)); grid-template-rows: repeat(2, min-content); } .framer-J1XvW .framer-7v2tkd-container, .framer-J1XvW .framer-e85sx0-container { align-self: start; flex: none; grid-column: 1 / -1; justify-self: start; max-width: unset; width: 100%; } .framer-J1XvW .framer-1mtyo3m-container { align-self: start; flex: none; grid-column: 1 / -1; justify-self: start; width: 100%; } .framer-J1XvW .framer-1pzy03k { justify-content: flex-start; overflow: auto; } .framer-J1XvW .framer-z9q2u6 { flex: none; width: 1100px; }}`,
+      ],
+      `framer-J1XvW`,
+    )),
+    (ct = $),
+    ($.displayName = `Projects`),
+    ($.defaultProps = { height: 3054, width: 1200 }),
+    _(
+      $,
+      [
+        {
+          explicitInter: !0,
+          fonts: [
+            {
+              cssFamilyName: `Inter`,
+              source: `framer`,
+              style: `normal`,
+              uiFamilyName: `Inter`,
+              unicodeRange: `U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F`,
+              url: `https://framerusercontent.com/assets/5vvr9Vy74if2I6bQbJvbw7SY1pQ.woff2`,
+              weight: `400`,
+            },
+            {
+              cssFamilyName: `Inter`,
+              source: `framer`,
+              style: `normal`,
+              uiFamilyName: `Inter`,
+              unicodeRange: `U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116`,
+              url: `https://framerusercontent.com/assets/EOr0mi4hNtlgWNn9if640EZzXCo.woff2`,
+              weight: `400`,
+            },
+            {
+              cssFamilyName: `Inter`,
+              source: `framer`,
+              style: `normal`,
+              uiFamilyName: `Inter`,
+              unicodeRange: `U+1F00-1FFF`,
+              url: `https://framerusercontent.com/assets/Y9k9QrlZAqio88Klkmbd8VoMQc.woff2`,
+              weight: `400`,
+            },
+            {
+              cssFamilyName: `Inter`,
+              source: `framer`,
+              style: `normal`,
+              uiFamilyName: `Inter`,
+              unicodeRange: `U+0370-03FF`,
+              url: `https://framerusercontent.com/assets/OYrD2tBIBPvoJXiIHnLoOXnY9M.woff2`,
+              weight: `400`,
+            },
+            {
+              cssFamilyName: `Inter`,
+              source: `framer`,
+              style: `normal`,
+              uiFamilyName: `Inter`,
+              unicodeRange: `U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF`,
+              url: `https://framerusercontent.com/assets/JeYwfuaPfZHQhEG8U5gtPDZ7WQ.woff2`,
+              weight: `400`,
+            },
+            {
+              cssFamilyName: `Inter`,
+              source: `framer`,
+              style: `normal`,
+              uiFamilyName: `Inter`,
+              unicodeRange: `U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2070, U+2074-207E, U+2080-208E, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD`,
+              url: `https://framerusercontent.com/assets/GrgcKwrN6d3Uz8EwcLHZxwEfC4.woff2`,
+              weight: `400`,
+            },
+            {
+              cssFamilyName: `Inter`,
+              source: `framer`,
+              style: `normal`,
+              uiFamilyName: `Inter`,
+              unicodeRange: `U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB`,
+              url: `https://framerusercontent.com/assets/b6Y37FthZeALduNqHicBT6FutY.woff2`,
+              weight: `400`,
+            },
+          ],
+        },
+        ...ze,
+        ...Ve,
+        ...Ue,
+        ...Ge,
+        ...x(ve),
+        ...x(ce),
+        ...x(De),
+      ],
+      { supportsExplicitInterCodegen: !0 },
+    ),
+    ($.loader = {
+      load: (e, t) => (
+        t.locale,
+        Promise.allSettled([v(F, {}, t), v(I, {}, t), v(U, {}, t)])
+      ),
+    }),
+    (lt = {
+      exports: {
+        default: {
+          type: `reactComponent`,
+          name: `FrameriMmW2B_8v`,
+          slots: [],
+          annotations: {
+            framerResponsiveScreen: `true`,
+            framerImmutableVariables: `true`,
+            framerCanvasComponentVariantDetails: `{"propertyName":"variant","data":{"default":{"layout":["fixed","fixed"]},"EHGA03dpT":{"layout":["fixed","fixed"]},"nPXYRbDJ_":{"layout":["fixed","fixed"]}}}`,
+            framerAutoSizeImages: `true`,
+            framerIntrinsicWidth: `1200`,
+            framerComponentViewportWidth: `true`,
+            framerIntrinsicHeight: `3054`,
+            framerAcceptsLayoutTemplate: `true`,
+            framerLayoutTemplateFlowEffect: `true`,
+            framerContractVersion: `1`,
+            framerScrollSections: `false`,
+            framerDisplayContentsDiv: `false`,
+            framerColorSyntax: `true`,
+          },
+        },
+        queryParamNames: {
+          type: `variable`,
+          annotations: { framerContractVersion: `1` },
+        },
+        Props: { type: `tsType`, annotations: { framerContractVersion: `1` } },
+        __FramerMetadata__: { type: `variable` },
+      },
+    }));
+})();
+export { lt as __FramerMetadata__, ct as default, qe as queryParamNames };
+//# sourceMappingURL=lz8tthlp0kQrAlKFG5GqTQCELAXO2Zfk8-smSAGz8oQ.CGYROii2.mjs.map
