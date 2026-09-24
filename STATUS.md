@@ -125,3 +125,17 @@ Also done in this round: the About section is forced to white type on a dark gro
 `!important` (module CSS plus `<style id="portfolio-about-overrides">` in the SSR), About card captions
 are un-clipped (`overflow`/`height` reset), and the pricing card CTA is raised above the decoration
 layers with `pointer-events`/`z-index` so `Get In Touch` is clickable on every card.
+
+### Final orders from the owner (25 Sep) and what is left
+- About heading: black, bold, with an outlined card around it — done (module CSS + SSR style block,
+  light ground restored, 67% removed, progress bars hidden so the red line can no longer cross the
+  captions).
+- Pricing Get In Touch: click area raised above decoration layers — done.
+- Work section: STILL BLOCKED. The collection data is correct and the client does fetch both the index
+  and the chunk locally, but it wants ?range=4-17280 and refuses the full-file response, so the list
+  and detail pages fall back to template defaults. The chunk is now trimmed to a single valid page
+  (17 281 bytes, six items, re-parse verified) and the request matches byte-for-byte, yet the page is
+  still blank — so the blocker is in how the client consumes the response, not only in the file size.
+  The dependable fix remains a range-aware endpoint for /cms/**
+  (cmswork/site_server.py has a working implementation) or bypassing the collection with a plain
+  ssets/projects/projects.js data module.
