@@ -88,3 +88,40 @@ and `refcheck.py` (broken local refs). Headless Edge screenshots are the most re
 `--dump-dom` can capture the pre-hydration state and report false "missing" results.
 
 ---
+
+### CMS blocker — measured precisely (25 Sep, 00:00–00:07)
+
+With `srv/log_server.py` on port 8130 the client requests are:
+
+```
+GET /cms/m2IMXOm093cPovjNkxK4/cjOfH0aqzklUUxIGuxuj/d0w_cWzte-indexes-default-0.framercms?range=0-32077
+GET /cms/m2IMXOm093cPovjNkxK4/cjOfH0aqzklUUxIGuxuj/d0w_cWzte-chunk-default-0.framercms?range=4-17280
+```
+
+- The index fetch succeeds (the file is exactly 32 078 bytes) and the chunk fetch is then issued, so
+  the collection *is* being read locally. The page still renders blank because the chunk response is
+  not what the client expects: it asks for bytes 4–17 280 and a static host returns all 31 405 bytes.
+- Truncating the chunk to exactly 17 281 bytes did not fix it either (the data was cut mid-record), so
+  a one-page collection still has to hold all six items *validly* for that route to be worth trying.
+- Important library gotcha: in `cmswork/framercms.py` the serializer writes each record from
+  `rec['_raw_fields']`, so mutating `rec['fields']` or calling `set_rich_text` has no effect on the
+  output — a full trim left the body at 31 401 bytes. Use the document-level API
+  (`fc.edit_item(doc, item_id, **fields)`, `fc.replace_items(...)`, `fc.mark_dirty(doc)`) or rewrite
+  `_raw_fields`, otherwise the file silently does not change.
+
+Fastest reliable fixes, in order:
+
+1. Serve `/cms/**` from a range-aware endpoint (serverless/edge function). Reference implementation:
+   `C:\Users\scary\AppData\Local\Temp\opencode\cmswork\site_server.py` — `project_chunk_data` and
+   `project_index_data` answer `?range=a-b` with exactly those bytes.
+2. Bypass the collection: have the work cards and project pages read `assets/projects/projects.js`
+   (a plain `export const projects = [...]`) instead of the CMS. That removes the binary format and
+   the range paging from the deployment. Touch points: `scripts/Ri1NKCxrz.Bb9Fe8pc.mjs` (card),
+   `scripts/mqvdOP…D0cCDoep.mjs` (list), `scripts/ahR_9a…VzdJo9Ek.mjs` (detail).
+3. Make the six items validly fit one 17 280-byte page (short rich text, no gallery, no detail image)
+   so the single chunk request matches the file length.
+
+Also done in this round: the About section is forced to white type on a dark ground with
+`!important` (module CSS plus `<style id="portfolio-about-overrides">` in the SSR), About card captions
+are un-clipped (`overflow`/`height` reset), and the pricing card CTA is raised above the decoration
+layers with `pointer-events`/`z-index` so `Get In Touch` is clickable on every card.
