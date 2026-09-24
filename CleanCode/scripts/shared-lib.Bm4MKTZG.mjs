@@ -340,11 +340,11 @@ var f,
   });
 function S(e, t) {
   return {
-    description: `A modern agency template with bold layouts, smooth interactions, and conversion-focused sections to showcase services, projects, and client work.`,
-    favicon: `https://framerusercontent.com/assets/hCT1q8ZlvWEMPyKp7tVCG8ArzM8.svg`,
+    description: `Arhan Arif is a web developer building fast, thoughtful websites for studios, small businesses and people with an idea worth putting online. Based in India.`,
+    favicon: `/assets/favicon.png`,
     robots: `max-image-preview:large`,
-    socialImage: `https://framerusercontent.com/assets/u5xlO0xE8hHeCTWtG5aM4zhbk2w.jpg`,
-    title: `Zynq`,
+    socialImage: `/assets/og-image.jpg`,
+    title: `Arhan Arif — Web Developer`,
   };
 }
 var C = e(() => {});
