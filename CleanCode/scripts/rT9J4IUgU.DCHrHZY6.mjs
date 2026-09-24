@@ -103,7 +103,7 @@ var L,
         ...c
       }) => ({
         ...c,
-        CmrOHUsjD: o ?? c.CmrOHUsjD ?? `Monza Co -  Landing Page`,
+        CmrOHUsjD: o ?? c.CmrOHUsjD ?? `Beacon Career`,
         nKHvk1MWe: n ?? c.nKHvk1MWe,
         p1EeNJXxM: a ??
           c.p1EeNJXxM ?? {
@@ -468,7 +468,7 @@ var L,
                           className: `framer-styles-preset-1litcpx`,
                           "data-styles-preset": `kyo9an03l`,
                           dir: `auto`,
-                          children: `Monza Co -  Landing Page`,
+                          children: `Beacon Career`,
                         }),
                       }),
                       className: `framer-fsyolv`,
@@ -522,7 +522,7 @@ var L,
           type: S.Enum,
         },
         CmrOHUsjD: {
-          defaultValue: `Monza Co -  Landing Page`,
+          defaultValue: `Beacon Career`,
           displayTextArea: !1,
           title: `Title`,
           type: S.String,

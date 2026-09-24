@@ -4341,12 +4341,12 @@ var Xn,
                                               {
                                                 href: {
                                                   pathVariables: {
-                                                    L6q2o4xpI: `monza-co---landing-page`,
+                                                    L6q2o4xpI: `beacon-career`,
                                                   },
                                                   unresolvedPathSlugs: {
                                                     L6q2o4xpI: {
                                                       collectionId: `d0w_cWzte`,
-                                                      collectionItemId: `Car2rHS0P`,
+                                                      collectionItemId: `BcCareer01`,
                                                     },
                                                   },
                                                   webPageId: `J6Q1AMwXS`,
@@ -4356,12 +4356,12 @@ var Xn,
                                               {
                                                 href: {
                                                   pathVariables: {
-                                                    L6q2o4xpI: `monza-co---landing-page`,
+                                                    L6q2o4xpI: `beacon-career`,
                                                   },
                                                   unresolvedPathSlugs: {
                                                     L6q2o4xpI: {
                                                       collectionId: `d0w_cWzte`,
-                                                      collectionItemId: `Car2rHS0P`,
+                                                      collectionItemId: `BcCareer01`,
                                                     },
                                                   },
                                                   webPageId: `J6Q1AMwXS`,
@@ -4371,12 +4371,12 @@ var Xn,
                                               {
                                                 href: {
                                                   pathVariables: {
-                                                    L6q2o4xpI: `monza-co---landing-page`,
+                                                    L6q2o4xpI: `beacon-career`,
                                                   },
                                                   unresolvedPathSlugs: {
                                                     L6q2o4xpI: {
                                                       collectionId: `d0w_cWzte`,
-                                                      collectionItemId: `Car2rHS0P`,
+                                                      collectionItemId: `BcCareer01`,
                                                     },
                                                   },
                                                   webPageId: `J6Q1AMwXS`,
@@ -6472,12 +6472,12 @@ var ui,
                                     children: x(B, {
                                       href: {
                                         pathVariables: {
-                                          L6q2o4xpI: `monza-co---landing-page`,
+                                          L6q2o4xpI: `beacon-career`,
                                         },
                                         unresolvedPathSlugs: {
                                           L6q2o4xpI: {
                                             collectionId: `d0w_cWzte`,
-                                            collectionItemId: `Car2rHS0P`,
+                                            collectionItemId: `BcCareer01`,
                                           },
                                         },
                                         webPageId: `J6Q1AMwXS`,
