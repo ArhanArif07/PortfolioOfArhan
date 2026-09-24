@@ -7959,9 +7959,6 @@ var wi,
       (Qi = {}),
       ($i = Object.keys(Qi)),
       (ea = [
-    `.framer-NWrst [data-border="true"] { --border-style: dotted !important; --border-color: rgba(120, 120, 120, 0.55) !important; }`
-    `.framer-NWrst [data-border="true"]::after { border-style: dotted !important; }`
-    `.framer-NWrst [data-border="true"] { border-radius: 20px; }`
         `@supports (aspect-ratio: 1) { body { --framer-aspect-ratio-supported: auto; } }`,
         `.framer-xunHB.framer-hbjutr, .framer-xunHB .framer-hbjutr { display: block; }`,
         `.framer-xunHB.framer-13vsk3m { align-content: center; align-items: center; background-color: var(--token-962dbf23-cea4-4b3f-b44d-d5595ab68b22, #ffffff); display: flex; flex-direction: column; flex-wrap: nowrap; gap: 0px; height: min-content; justify-content: flex-start; overflow: var(--overflow-clip-fallback, clip); padding: var(--1ot41jm); position: relative; width: 100%; }`,
