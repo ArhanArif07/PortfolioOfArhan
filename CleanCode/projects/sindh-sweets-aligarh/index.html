@@ -12,6 +12,8 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.ico">
 <link rel="apple-touch-icon" href="/assets/favicon.png">
+<link rel="preload" href="/assets/vendor/gsap.min.js" as="script">
+<link rel="stylesheet" href="/styles/lenis.css">
 <style>
 @font-face{font-family:Inter;src:url(/assets/fonts/UjlFhCnUjxhNfep4oYBPqnEssyo.woff2)format('woff2');font-weight:500;font-display:swap}
 @font-face{font-family:Inter;src:url(/assets/fonts/cRJyLNuTJR5jbyKzGi33wU9cqIQ.woff2)format('woff2');font-weight:600;font-display:swap}
@@ -98,11 +100,31 @@ footer{border-top:1px solid var(--line);margin-top:clamp(64px,9vw,120px);padding
 .foot-links a:hover{color:var(--ink)}
 .reveal{opacity:0;transform:translateY(26px);transition:opacity 0.7s cubic-bezier(0.2,0.7,0.2,1),transform 0.7s cubic-bezier(0.2,0.7,0.2,1)}
 .reveal.in{opacity:1;transform:none}
+html.gsap .reveal,html.no-anim .reveal{opacity:1;transform:none;transition:none}
+html.no-anim *{animation:none!important;transition-duration:0.01ms!important}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+.lenis.lenis-smooth [data-lenis-prevent]{overscroll-behavior:contain}
+.lenis.lenis-stopped{overflow:hidden}
+.lenis.lenis-scrolling iframe{pointer-events:none}
+.split-line{display:block;overflow:hidden;padding-bottom:0.06em}
+.split-inner{display:block;will-change:transform}
+.word{display:inline-block;will-change:transform;margin-right:0.26em}
+.split-inner .word:last-child{margin-right:0}
+.fillbar{position:absolute;inset:0;background:linear-gradient(100deg,var(--peach) 0%,var(--peach-deep) 60%,#ffd9c4 100%);transform-origin:left center;pointer-events:none;z-index:2}
+.marquee{overflow:hidden;border-block:1px solid var(--line);padding:18px 0;margin-top:clamp(40px,6vw,72px);background:#fff}
+.marquee-track{display:flex;gap:44px;width:max-content;will-change:transform}
+.marquee-track span{font-size:clamp(18px,2.4vw,32px);font-weight:900;letter-spacing:-0.03em;white-space:nowrap;display:flex;align-items:center;gap:44px}
+.marquee-track i{font-style:normal;color:var(--accent);font-size:0.6em}
+.cursor-dot{position:fixed;width:10px;height:10px;border-radius:50%;background:var(--ink);pointer-events:none;z-index:70;transform:translate(-50%,-50%);opacity:0;transition:opacity 0.3s ease,transform 0.3s ease}
+html.gsap.has-cursor .cursor-dot{opacity:1}
+@media(hover:hover) and (pointer:fine){html.gsap.has-cursor .row:hover ~ .cursor-dot,html.gsap.has-cursor .cursor-dot.on{transform:translate(-50%,-50%) scale(2.4)}}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}*{scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
 <div class="progress"></div>
+<div class="cursor-dot" aria-hidden="true"></div>
 <header class="nav">
   <div class="wrap nav-in">
     <a class="brand" href="/"><img src="/assets/logo.webp" alt="Arhan Arif logo" width="26" height="26" decoding="async">ARHAN ARIF</a>
@@ -131,6 +153,10 @@ footer{border-top:1px solid var(--line);margin-top:clamp(64px,9vw,120px);padding
     <div class="brand-panel reveal"><img src="/assets/projects/sindh-sweets-aligarh-photo.webp" alt="Sindh Sweets Aligarh logo" width="420" decoding="async"></div>
     <figure class="shot reveal"><img src="/assets/projects/sindh-sweets-aligarh.webp" alt="Sindh Sweets Aligarh screenshot" width="1600" height="1000" decoding="async"></figure>
   </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track"><span>SINDH SWEETS ALIGARH <i>✳</i></span><span>RESTAURANT <i>✳</i></span><span>DESIGN &amp; DEVELOPMENT <i>✳</i></span><span>BUSINESS WEBSITE <i>✳</i></span><span>GSAP <i>✳</i></span><span>ScrollTrigger <i>✳</i></span><span>Lenis <i>✳</i></span><span>SINDH SWEETS ALIGARH <i>✳</i></span><span>RESTAURANT <i>✳</i></span><span>DESIGN &amp; DEVELOPMENT <i>✳</i></span><span>BUSINESS WEBSITE <i>✳</i></span><span>GSAP <i>✳</i></span><span>ScrollTrigger <i>✳</i></span><span>Lenis <i>✳</i></span></div>
+  </div>
 
   <section class="wrap narrative">
     <article class="block reveal"><span class="mono">Project Overview</span><h2>Sindh Sweets Aligarh</h2><p>A storefront site for a mithai and dessert shop on Samad Road, Aligarh — traditional mithai, desi-ghee sweets, ghewar, gift boxes and the full menu.</p></article>
@@ -181,21 +207,157 @@ footer{border-top:1px solid var(--line);margin-top:clamp(64px,9vw,120px);padding
     </div>
   </div>
 </footer>
-<script>
+<script src="/assets/vendor/gsap.min.js" defer></script>
+<script src="/assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="/assets/vendor/lenis.min.js" defer></script>
+<script defer>
+window.addEventListener('DOMContentLoaded',function(){
 (function(){
-  var bar=document.querySelector('.progress');
-  function onScroll(){var h=document.documentElement.scrollHeight-window.innerHeight;if(bar){bar.style.width=(h>0?(window.scrollY/h)*100:0)+'%';}}
-  onScroll();window.addEventListener('scroll',onScroll,{passive:true});
-  var io=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:0.12,rootMargin:'0px 0px -8% 0px'});
-  document.querySelectorAll('.reveal').forEach(function(el,i){el.style.transitionDelay=(Math.min(i,6)*70)+'ms';io.observe(el);});
-  var shot=document.querySelector('.shot img');
-  if(shot&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
-    window.addEventListener('scroll',function(){
-      var r=shot.getBoundingClientRect(),off=(r.top-window.innerHeight/2)*0.03;
-      shot.style.transform='translateY('+off.toFixed(1)+'px) scale(1.04)';
-    },{passive:true});
+  var root=document.documentElement;
+  var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function fallback(){
+    root.classList.add('no-anim');
+    document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');});
   }
+  if(reduced||!window.gsap||!window.ScrollTrigger||!window.Lenis){fallback();return;}
+  root.classList.add('gsap');
+  gsap.registerPlugin(ScrollTrigger);
+
+  var lenis=new Lenis({lerp:0.085,wheelMultiplier:1,smoothWheel:true,syncTouch:true});
+  lenis.on('scroll',ScrollTrigger.update);
+  gsap.ticker.add(function(time){lenis.raf(time*1000);});
+  gsap.ticker.lagSmoothing(0);
+
+  function splitLines(el){
+    var text=el.textContent.trim();
+    if(!text)return [];
+    var words=text.split(/\s+/);
+    var box=document.createElement('div');
+    box.style.cssText='position:absolute;visibility:hidden;left:-9999px;top:0;width:'+el.clientWidth+'px';
+    var spans=words.map(function(w){var s=document.createElement('span');s.className='word';s.textContent=w;box.appendChild(s);return s;});
+    var host=el.parentNode;
+    host.appendChild(box);
+    var tops=spans.map(function(s){return Math.round(s.offsetTop);});
+    host.removeChild(box);
+    el.textContent='';
+    var lines=[],line=null,lastTop=null;
+    spans.forEach(function(s,i){
+      if(lastTop===null||Math.abs(tops[i]-lastTop)>3){
+        line=document.createElement('span');line.className='split-line';
+        var inner=document.createElement('span');inner.className='split-inner';
+        line.appendChild(inner);el.appendChild(line);lines.push(inner);lastTop=tops[i];
+      }
+      line.appendChild(s);
+    });
+    var measured=el.querySelectorAll('.word');
+    var tops=[];
+    for(var i=0;i<measured.length;i++)tops.push(Math.round(measured[i].getBoundingClientRect().top));
+    var rebuilt=[],current=null,previous=null;
+    for(var j=0;j<measured.length;j++){
+      if(previous===null||Math.abs(tops[j]-previous)>3){
+        current=document.createElement('span');current.className='split-line';
+        var innerEl=document.createElement('span');innerEl.className='split-inner';
+        current.appendChild(innerEl);el.appendChild(current);rebuilt.push(innerEl);previous=tops[j];
+      }
+      current.appendChild(measured[j]);
+    }
+    return rebuilt;
+  }
+
+  var hero=document.querySelector('h1');
+  var heroLines=hero?splitLines(hero):[];
+  var lede=document.querySelector('.lede');
+  var ledeWords=lede?splitLines(lede):[];
+  document.querySelectorAll('.block h2, .all-head h2, .next strong').forEach(function(el){
+    el.setAttribute('data-split','');splitLines(el);
+  });
+
+  var intro=gsap.timeline({defaults:{ease:'expo.out'}});
+  intro.from('.eyebrow',{yPercent:60,opacity:0,duration:1,clearProps:'transform'})
+      .from(heroLines,{yPercent:115,duration:1.3,stagger:0.09},'-=0.7')
+      .from(ledeWords,{yPercent:105,opacity:0,duration:0.9,stagger:0.035},'-=0.85')
+      .from('.meta > div',{y:26,opacity:0,duration:0.9,stagger:0.07},'-=0.7')
+      .from('.nav-in > *',{y:-18,opacity:0,duration:0.8,stagger:0.06},0.1);
+
+  var panel=document.querySelector('.brand-panel');
+  if(panel){
+    gsap.from(panel,{clipPath:'inset(0% 0% 100% 0%)',duration:1.4,ease:'expo.inOut',delay:0.25});
+    gsap.from(panel.querySelector('img'),{scale:0.86,yPercent:8,duration:1.6,ease:'expo.out',delay:0.35});
+    gsap.to(panel.querySelector('img'),{yPercent:-8,scale:1.04,ease:'none',scrollTrigger:{trigger:panel,start:'top bottom',end:'bottom top',scrub:0.8}});
+  }
+  var shot=document.querySelector('.shot');
+  if(shot){
+    gsap.from(shot,{y:60,opacity:0,duration:1.2,ease:'expo.out',scrollTrigger:{trigger:shot,start:'top 88%'}});
+    gsap.to(shot.querySelector('img'),{yPercent:-7,scale:1.08,ease:'none',scrollTrigger:{trigger:shot,start:'top bottom',end:'bottom top',scrub:0.6}});
+  }
+
+  gsap.utils.toArray('.block').forEach(function(block,i){
+    var label=block.querySelector('.mono');
+    var heading=block.querySelector('[data-split] .split-inner');
+    var body=block.querySelector('p');
+    var tl=gsap.timeline({scrollTrigger:{trigger:block,start:'top 82%'}});
+    if(label)tl.from(label,{x:-24,opacity:0,duration:0.7},0);
+    if(heading)tl.from(heading,{yPercent:110,duration:1.05,ease:'expo.out'},0.05);
+    if(body)tl.from(body,{y:24,opacity:0,duration:0.9},0.2);
+  });
+
+  gsap.from('.chip',{y:18,opacity:0,duration:0.7,stagger:0.05,ease:'power3.out',scrollTrigger:{trigger:'.chips',start:'top 88%'}});
+  gsap.from('.cta-row > *',{y:22,opacity:0,duration:0.8,stagger:0.08,ease:'power3.out',scrollTrigger:{trigger:'.cta-row',start:'top 90%'}});
+  gsap.from('.next',{y:40,opacity:0,duration:1,ease:'expo.out',scrollTrigger:{trigger:'.next',start:'top 92%'}});
+  gsap.from('.all-head .split-inner',{yPercent:110,duration:1.1,ease:'expo.out',scrollTrigger:{trigger:'.all-head',start:'top 88%'}});
+
+  gsap.from('.row',{y:34,opacity:0,duration:0.9,stagger:0.08,ease:'expo.out',scrollTrigger:{trigger:'.rows',start:'top 84%'}});
+  gsap.utils.toArray('.row').forEach(function(row){
+    var thumb=row.querySelector('.thumb');
+    if(!thumb)return;
+    gsap.fromTo(thumb,{rotate:0},{rotate:-4,scrollTrigger:{trigger:row,start:'top bottom',end:'bottom top',scrub:1}});
+  });
+
+  var track=document.querySelector('.marquee-track');
+  if(track){
+    var loop=gsap.to(track,{xPercent:-50,duration:22,ease:'none',repeat:-1});
+    loop.pause();
+    ScrollTrigger.create({trigger:'.marquee',start:'top bottom',end:'bottom top',onEnter:function(){loop.play();},onLeaveBack:function(){loop.pause();}});
+  }
+
+  gsap.to('.progress',{scaleX:1,ease:'none',transformOrigin:'left center',scrollTrigger:{start:0,end:'max',scrub:0.3}});
+
+  if(window.matchMedia('(hover:hover) and (pointer:fine)').matches){
+    var dot=document.querySelector('.cursor-dot');
+    if(dot){
+      root.classList.add('has-cursor');
+      var xTo=gsap.quickTo(dot,'x',{duration:0.35,ease:'power3'}),yTo=gsap.quickTo(dot,'y',{duration:0.35,ease:'power3'});
+      window.addEventListener('pointermove',function(e){xTo(e.clientX);yTo(e.clientY);});
+      document.querySelectorAll('a, .chip').forEach(function(el){
+        el.addEventListener('pointerenter',function(){dot.classList.add('on');});
+        el.addEventListener('pointerleave',function(){dot.classList.remove('on');});
+      });
+    }
+  }
+
+  document.querySelectorAll('a[href^="#"], a[href="/"]').forEach(function(link){
+    link.addEventListener('click',function(event){
+      var target=link.getAttribute('href');
+      if(target&&target.charAt(0)==='#'){event.preventDefault();lenis.scrollTo(target,{offset:-80});}
+    });
+  });
+
+  window.addEventListener('load',function(){ScrollTrigger.refresh();});
+  root.setAttribute('data-anim','gsap-lenis');
 })();
+});
+</script>
+<script>
+window.addEventListener('DOMContentLoaded',function(){
+  var root=document.documentElement;
+  setTimeout(function(){
+    if(root.getAttribute('data-anim')||root.classList.contains('gsap'))return;
+    root.classList.add('no-anim');
+    var io=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:0.1});
+    document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+    setTimeout(function(){document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');});},1200);
+  },900);
+});
 </script>
 </body>
 </html>
