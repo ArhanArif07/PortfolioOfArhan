@@ -194,6 +194,7 @@ What was done, and what it is honestly worth:
 | Responsive layout | Screenshots at 1440, 834, 390 for 10 page/viewport combinations | No overflow; measured `scrollWidth == innerWidth == 390` on a real 390px viewport |
 | Rendered metadata | Read `document.title` after hydration | Per-page title holds (head guard working) |
 | Module syntax | `node --check` on the Framer module | OK |
+| Live deployment | HTTP status, title, canonical, JSON-LD and link checks against the deployed origin | 15/15 pages 200, all canonicals self-referencing, 0 invalid JSON-LD, 0 broken links |
 
 ---
 
@@ -204,8 +205,31 @@ What was done, and what it is honestly worth:
 | React #405 hydration warnings on the homepage | Cosmetic; console noise, no functional effect | Structural — only fixable by moving off the Framer export. Out of scope now. |
 | Origin is a GitHub Pages URL, not a domain | Brand credibility and future migration cost | Attach a real domain; change `ORIGIN` in one place (`seo_meta.py`, `make_robots_sitemap.py`, `build_local_page.py`, `build_routes.py`) and every canonical, OG URL, sitemap entry and schema node follows. |
 | Homepage still ships the Framer runtime (~1MB HTML) | Largest page weight on the site | Migrate the homepage to the hand-built shell the other 16 pages use, once there is appetite for a visual re-check. |
+| GitHub Pages does not serve the custom 404 body | Unknown URLs return a hard 404 with an empty body instead of the styled page | Cosmetic only — the status code is 404, so there is no soft-404 risk. `/404/` and `/404.html` are both reachable and `noindex`. Verified it is not the `404/` directory shadowing the file. |
+| The local page link in the homepage footer is injected by script | Crawlers that do not execute JavaScript do not see that one link | Discovery is covered by `sitemap.xml` plus static footer links on `/projects/`, all six case studies and the local page itself (9 static inbound links). |
 | No `Date`/author freshness signals beyond schema `datePublished` | Weak for note recency | Revisit when notes are added regularly. |
 | No analytics | Cannot measure anything | Add a privacy-respecting analytics setup only after a decision about data handling. |
+
+---
+
+## 8a. Deployment
+
+The site was not live when this audit started — GitHub Pages was never enabled on the repository, so the
+canonical origin used throughout this document returned 404. It is live now.
+
+| Item | Value |
+| --- | --- |
+| Repository | `github.com/ArhanArif07/PortfolioOfArhan` (visibility changed from private to public for this deployment) |
+| Hosting | GitHub Pages, `build_type: workflow` |
+| Workflow | `.github/workflows/pages.yml` — `actions/configure-pages@v5` → `actions/upload-pages-artifact@v3` (`path: CleanCode`) → `actions/deploy-pages@v4`, on every push to `main` |
+| Live origin | `https://arhanarif07.github.io/PortfolioOfArhan/` — matches `ORIGIN` in every page, so no canonical is wrong |
+| Published tree | `CleanCode/` only; the 30MB `arhanportfolio.har`, the `extracted/` Framer API dump, `works/`, `temp_helpers/` and the status notes are `.gitignore`d and were untracked |
+| Credentials | The Framer access token under `extracted/api.framer.com/auth/` was already git-ignored and was never committed. The HAR was scanned for `Authorization`, `Bearer`, `Cookie` and API-key patterns: no hits. |
+
+Verified over HTTP against the deployed site after the last deployment: 15 indexable pages plus
+`robots.txt` and `sitemap.xml` all return 200, every canonical is a self-referencing absolute URL, every
+JSON-LD block parses, the homepage's internal links all resolve, and the two slashless stub URLs return their
+redirect with `noindex`.
 
 ---
 
