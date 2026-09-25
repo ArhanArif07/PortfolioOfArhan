@@ -14122,7 +14122,7 @@ e(() => {
                             ],
                           }),
                           g(`div`, {
-                            className: `framer-20ilum`,
+                            className: `framer-20ilum tsa-wrap`,
                             "data-framer-name": `Cards`,
                             children: [
                             g(`div`, {
