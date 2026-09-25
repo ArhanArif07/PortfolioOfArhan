@@ -1904,7 +1904,7 @@ var q,
         TFwTvFHdo: { defaultValue: ``, title: `Time`, type: f.String },
         K5yLvY3ng: { title: `Date`, type: f.Date },
         xhWRV7cKr: {
-          defaultValue: `Alex Carter`,
+          defaultValue: `Arhan Arif`,
           title: `Writer`,
           type: f.String,
         },

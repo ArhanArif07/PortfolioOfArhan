@@ -1954,7 +1954,7 @@ var G,
         TFwTvFHdo: { defaultValue: ``, title: `Time`, type: j.String },
         K5yLvY3ng: { title: `Date`, type: j.Date },
         xhWRV7cKr: {
-          defaultValue: `Alex Carter`,
+          defaultValue: `Arhan Arif`,
           title: `Writer`,
           type: j.String,
         },
