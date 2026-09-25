@@ -1,0 +1,9 @@
+# robots.txt — Arhan Arif, web developer in Aligarh
+User-agent: *
+Allow: /
+
+# nothing is private or duplicate-only; assets are needed for rendering
+Disallow: /404/
+Disallow: /*.html$
+
+Sitemap: https://arhanarif07.github.io/PortfolioOfArhan/sitemap.xml

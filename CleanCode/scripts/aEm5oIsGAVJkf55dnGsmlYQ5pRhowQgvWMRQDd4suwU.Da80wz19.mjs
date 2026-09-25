@@ -3050,7 +3050,7 @@ var rr,
                     m(I, {
                       __fromCanvasComponent: !0,
                       children: m(t, {
-                        children: m(v.h1, {
+                        children: m(v.h2, {
                           className: `framer-styles-preset-ck8fzq`,
                           "data-styles-preset": `Uw3l4qsY8`,
                           dir: `auto`,
@@ -3081,7 +3081,7 @@ var rr,
                         {
                           XjlRF0gIv: {
                             children: m(t, {
-                              children: m(v.h1, {
+                              children: m(v.h2, {
                                 className: `framer-styles-preset-ck8fzq`,
                                 "data-styles-preset": `Uw3l4qsY8`,
                                 dir: `auto`,
