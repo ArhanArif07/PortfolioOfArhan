@@ -351,6 +351,45 @@
       .framer-NWrst [data-styles-preset="aH41o35LP"] { line-height: 1.18 !important; overflow: visible !important; padding-top: 1px !important; }
       .framer-NWrst [data-framer-name="Content-box"] h6 { line-height: 1.2 !important; overflow: visible !important; padding-top: 1px !important; margin-top: 0 !important; }
     </style>
+      <style id="testimonial-editorial">
+      .framer-NWrst [data-framer-name="Cards"] { display: block !important; width: 100% !important; height: auto !important; }
+      .framer-NWrst .tsa {
+        position: relative; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end;
+        column-gap: clamp(24px, 4vw, 64px); row-gap: clamp(20px, 2.4vw, 34px);
+        margin-top: clamp(40px, 5vw, 72px); padding: clamp(28px, 4.2vw, 72px);
+        border: 1px solid rgba(20, 20, 20, 0.12); border-radius: 20px; background: #ffffff; overflow: hidden;
+      }
+      .framer-NWrst .tsa::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: #ff2121; }
+      .framer-NWrst .tsa__mark { grid-column: 1; grid-row: 1; display: flex; align-items: center; }
+      .framer-NWrst .tsa__mark img { height: clamp(32px, 3.2vw, 48px); width: auto; max-width: min(42%, 220px); object-fit: contain; object-position: left center; }
+      .framer-NWrst .tsa__label { grid-column: 2; grid-row: 1; justify-self: end; align-self: center; margin: 0; font-family: 'Fira Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #8a8a8a; }
+      .framer-NWrst .tsa__quote {
+        grid-column: 1 / -1; grid-row: 2; margin: 0; max-width: min(100%, 23em);
+        font-family: Inter, system-ui, sans-serif; font-size: clamp(22px, 2.55vw, 40px); line-height: 1.24;
+        letter-spacing: -0.025em; font-weight: 500; color: #141414; text-wrap: pretty;
+      }
+      .framer-NWrst .tsa__foot { grid-column: 1 / -1; grid-row: 3; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-top: clamp(18px, 2vw, 28px); border-top: 1px solid rgba(20, 20, 20, 0.1); }
+      .framer-NWrst .tsa__by { margin: 0; font-family: 'Fira Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #141414; }
+      .framer-NWrst .tsa__cta { display: inline-flex; align-items: center; gap: 10px; font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #141414; text-decoration: none; border-bottom: 1px solid rgba(20, 20, 20, 0.25); padding-bottom: 6px; transition: border-color 0.35s ease, color 0.35s ease; }
+      .framer-NWrst .tsa__cta:hover { border-color: #ff2121; color: #ff2121; }
+      .framer-NWrst .tsa__cta:focus-visible { outline: 2px solid #ff2121; outline-offset: 4px; border-radius: 4px; }
+      .framer-NWrst .tsa__arrow { display: inline-block; font-size: 14px; line-height: 1; transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1); }
+      .framer-NWrst .tsa__cta:hover .tsa__arrow { transform: translateX(6px); }
+      @media (prefers-reduced-motion: no-preference) {
+        .framer-NWrst .tsa__mark, .framer-NWrst .tsa__label, .framer-NWrst .tsa__quote, .framer-NWrst .tsa__foot { opacity: 0; transform: translateY(18px); transition: opacity 0.9s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1); }
+        .framer-NWrst .tsa.in .tsa__mark { opacity: 1; transform: none; transition-delay: 0.04s; }
+        .framer-NWrst .tsa.in .tsa__label { opacity: 1; transform: none; transition-delay: 0.1s; }
+        .framer-NWrst .tsa.in .tsa__quote { opacity: 1; transform: none; transition-delay: 0.16s; }
+        .framer-NWrst .tsa.in .tsa__foot { opacity: 1; transform: none; transition-delay: 0.28s; }
+      }
+      @media (max-width: 720px) {
+        .framer-NWrst .tsa { grid-template-columns: minmax(0, 1fr); row-gap: 18px; padding: 26px 22px 28px; }
+        .framer-NWrst .tsa__mark { grid-column: 1; grid-row: 1; }
+        .framer-NWrst .tsa__label { grid-column: 1; grid-row: 2; justify-self: start; align-self: start; }
+        .framer-NWrst .tsa__quote { grid-column: 1; grid-row: 3; max-width: 100%; font-size: clamp(21px, 5.4vw, 26px); line-height: 1.32; }
+        .framer-NWrst .tsa__foot { grid-column: 1; grid-row: 4; flex-direction: column; align-items: flex-start; gap: 16px; }
+      }
+    </style>
   </head>
 <body>
 
@@ -4352,140 +4391,7 @@
                 </p>
               </div>
             </div>
-            <div class="framer-20ilum" data-framer-name="Cards">
-              <div class="framer-1fk9d4u" data-border="true" data-framer-name="Card-one" style="will-change:transform;opacity:0;transform:translateY(100px)">
-                <div class="ssr-variant">
-                  <div class="framer-170m181" data-framer-name="Image">
-                    <div style="position:absolute;border-radius:inherit;corner-shape:inherit;top:0;right:0;bottom:0;left:0" data-framer-background-image-wrapper="true">
-                      <img decoding="async" loading="lazy" width="1596" height="1600" sizes="(min-width: 1200px) calc(max((min(max(100vw - 40px, 1px), 1440px) - 20px) / 3, 50px) - 2px), (min-width: 810px) and (max-width: 1199.98px) calc(max((min(max(100vw - 40px, 1px), 1440px) - 10px) / 2, 50px) - 2px), (max-width: 809.98px) calc(max(min(100vw - 40px, 1440px), 50px) - 2px)" srcset="./assets/images/zXKPFhGBXwmYRTjwxvdWYGDWuh8.png!height=1600&scale-down-to=1024&width=1596?scale-down-to=1024&amp;width=1596&amp;height=1600 1021w,./assets/images/zXKPFhGBXwmYRTjwxvdWYGDWuh8.png!height=1600&scale-down-to=1024&width=1596?width=1596&amp;height=1600 1596w" src="./assets/images/zXKPFhGBXwmYRTjwxvdWYGDWuh8.png!height=1600&scale-down-to=1024&width=1596?width=1596&amp;height=1600" alt="image" style="display:block;width:100%;height:100%;border-radius:inherit;corner-shape:inherit;object-position:center;object-fit:cover">
-                    </div>
-                    <div class="framer-1xx4phr-container">
-                      <!--$-->
-                      <div style="position:absolute;inset:0;overflow:hidden">
-                        <div style="opacity:1;position:absolute;inset:0;z-index:1;mask-image:linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 12.5%, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 0) 37.5%);-webkit-mask-image:linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 12.5%, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 0) 37.5%);border-radius:0px;pointer-events:none;backdrop-filter:blur(0.15625px)">
-                        </div>
-                        <div style="opacity:1;position:absolute;inset:0;z-index:2;mask-image:linear-gradient(to bottom, rgba(0, 0, 0, 0) 12.5%, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 1) 37.5%, rgba(0, 0, 0, 0) 50%);-webkit-mask-image:linear-gradient(to bottom, rgba(0, 0, 0, 0) 12.5%, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 1) 37.5%, rgba(0, 0, 0, 0) 50%);border-radius:0px;pointer-events:none;backdrop-filter:blur(0.3125px)">
-                        </div>
-                        <div style="opacity:1;position:absolute;inset:0;z-index:3;mask-image:linear-gradient(to bottom, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 1) 37.5%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 62.5%);-webkit-mask-image:linear-gradient(to bottom, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 1) 37.5%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 62.5%);border-radius:0px;pointer-events:none;backdrop-filter:blur(0.625px)">
-                        </div>
-                        <div style="opacity:1;position:absolute;inset:0;z-index:4;mask-image:linear-gradient(to bottom, rgba(0, 0, 0, 0) 37.5%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 62.5%, rgba(0, 0, 0, 0) 75%);-webkit-mask-image:linear-gradient(to bottom, rgba(0, 0, 0, 0) 37.5%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 62.5%, rgba(0, 0, 0, 0) 75%);border-radius:0px;pointer-events:none;backdrop-filter:blur(1.25px)">
-                        </div>
-                        <div style="opacity:1;position:absolute;inset:0;z-index:5;mask-image:linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1) 62.5%, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 0) 87.5%);-webkit-mask-image:linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1) 62.5%, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 0) 87.5%);border-radius:0px;pointer-events:none;backdrop-filter:blur(2.5px)">
-                        </div>
-                        <div style="opacity:1;position:absolute;inset:0;z-index:6;mask-image:linear-gradient(to bottom, rgba(0, 0, 0, 0) 62.5%, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 1) 87.5%, rgba(0, 0, 0, 0) 100%);-webkit-mask-image:linear-gradient(to bottom, rgba(0, 0, 0, 0) 62.5%, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 1) 87.5%, rgba(0, 0, 0, 0) 100%);border-radius:0px;pointer-events:none;backdrop-filter:blur(5px)">
-                        </div>
-                        <div style="opacity:1;position:absolute;inset:0;z-index:7;mask-image:linear-gradient(to bottom, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 1) 87.5%, rgba(0, 0, 0, 1) 100%);-webkit-mask-image:linear-gradient(to bottom, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 1) 87.5%, rgba(0, 0, 0, 1) 100%);border-radius:0px;pointer-events:none;backdrop-filter:blur(10px)">
-                        </div>
-                        <div style="opacity:1;position:absolute;inset:0;z-index:8;mask-image:linear-gradient(to bottom, rgba(0, 0, 0, 0) 87.5%, rgba(0, 0, 0, 1) 100%);-webkit-mask-image:linear-gradient(to bottom, rgba(0, 0, 0, 0) 87.5%, rgba(0, 0, 0, 1) 100%);border-radius:0px;pointer-events:none;backdrop-filter:blur(20px)">
-                        </div>
-                      </div>
-                      <!--/$-->
-                    </div>
-                    <div class="framer-1w9anzi" data-framer-name="Linear">
-                    </div>
-                  </div>
-                </div>
-                <div class="framer-13dkrl9" data-framer-name="Logo" style="height:auto;aspect-ratio:3.3">
-                  <div style="position:absolute;border-radius:inherit;corner-shape:inherit;top:0;right:0;bottom:0;left:0" data-framer-background-image-wrapper="true">
-                    <img decoding="async" loading="lazy" width="132" height="40" src="./assets/images/3IaQVVVTSVw2TnkNi5DgbrfVG6E.svg!height=40&width=132?width=132&amp;height=40" alt="logo" style="display:block;width:100%;height:100%;border-radius:inherit;corner-shape:inherit;object-position:center;object-fit:cover">
-                  </div>
-                </div>
-                <div class="framer-tt2of8" data-framer-component-type="RichTextContainer" style="transform:none">
-                  <p class="framer-text framer-styles-preset-1mk8z8h" data-styles-preset="sPvC_pCwb" dir="auto" style="--framer-text-color:var(--token-18c0a90f-4c91-40d5-87bc-96696572c777, rgb(0, 0, 0))">
-                    “Honestly, Arhaan is my guy! He did an amazing job designing my website and really understood the vision I had for my SaaS and motion design service. The whole process was smooth, and the final result came out even better than I expected. If you’re looking for someone who’s creative, reliable, and genuinely cares about the work, I would definitely recommend Arhaan. You won’t regret working with him!”
-                  </p>
-                </div>
-              </div>
-              <div class="framer-13fpurk" data-border="true" data-framer-name="Card-two" style="will-change:transform;opacity:0;transform:translateY(100px)">
-                <div class="framer-k7u4ud" data-framer-name="Heading">
-                  <div class="framer-1kjs3nm" data-framer-name="Logo" style="height:auto;aspect-ratio:3.95">
-                    <div style="position:absolute;border-radius:inherit;corner-shape:inherit;top:0;right:0;bottom:0;left:0" data-framer-background-image-wrapper="true">
-                      <img decoding="async" loading="lazy" width="79" height="20" src="./assets/images/Q5Lqxkodtab7Q90CzmoBJUst2c.svg!height=20&width=79?width=79&amp;height=20" alt="logo" style="display:block;width:100%;height:100%;border-radius:inherit;corner-shape:inherit;object-position:center;object-fit:cover">
-                    </div>
-                  </div>
-                  <div class="framer-1334gb" data-framer-component-type="RichTextContainer" style="transform:none">
-                    <h6 class="framer-text framer-styles-preset-1litcpx" data-styles-preset="kyo9an03l" dir="auto">
-                      Client — Velio Labs
-                    </h6>
-                  </div>
-                </div>
-                <div class="framer-19uztba" data-framer-name="Rate &amp; Button">
-                  <div class="framer-12bo780" data-framer-name="Ratings">
-                    <div class="framer-12utwy5" data-framer-name="Avatars">
-                      <div class="framer-2dv2y4" data-framer-name="Avatar-three">
-                        <div style="position:absolute;border-radius:inherit;corner-shape:inherit;top:0;right:0;bottom:0;left:0" data-framer-background-image-wrapper="true">
-                          <img decoding="async" loading="lazy" width="184" height="184" src="./assets/images/SyoCpEame1WdJyhvXTQNeWDDhdQ.png!height=184&width=184?width=184&amp;height=184" alt="image" style="display:block;width:100%;height:100%;border-radius:inherit;corner-shape:inherit;object-position:center;object-fit:cover">
-                        </div>
-                      </div>
-                      <div class="framer-1i3llku" data-framer-name="Avatar-two">
-                        <div style="position:absolute;border-radius:inherit;corner-shape:inherit;top:0;right:0;bottom:0;left:0" data-framer-background-image-wrapper="true">
-                          <img decoding="async" loading="lazy" width="184" height="184" src="./assets/images/DJ1or49pogEr94N0xbEdll0I2s0.png!height=184&width=184?width=184&amp;height=184" alt="image" style="display:block;width:100%;height:100%;border-radius:inherit;corner-shape:inherit;object-position:center;object-fit:cover">
-                        </div>
-                      </div>
-                      <div class="framer-1t3qzuv" data-framer-name="Avatar-one">
-                        <div style="position:absolute;border-radius:inherit;corner-shape:inherit;top:0;right:0;bottom:0;left:0" data-framer-background-image-wrapper="true">
-                          <img decoding="async" loading="lazy" width="184" height="184" src="./assets/images/g7hd8DP6uzwHWGcYl6KpJosO6LM.png!height=184&width=184?width=184&amp;height=184" alt="image" style="display:block;width:100%;height:100%;border-radius:inherit;corner-shape:inherit;object-position:center;object-fit:cover">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="framer-7feyo3" data-framer-component-type="RichTextContainer" style="transform:none">
-                      <p class="framer-text framer-styles-preset-3fyugt" data-styles-preset="iFFcEKQM3" dir="auto" style="--framer-text-color:var(--token-18c0a90f-4c91-40d5-87bc-96696572c777, rgb(0, 0, 0))">
-                        
-                      </p>
-                    </div>
-                  </div>
-                  <!--$-->
-                  <div class="ssr-variant">
-                    <div class="framer-12kmra4-container">
-                      <!--$-->
-                      <a class="framer-HGRLy framer-H39Wd framer-ej88hq framer-v-ej88hq framer-133jq9h" data-framer-name="Default" href="./projects" style="background-color:var(--token-18c0a90f-4c91-40d5-87bc-96696572c777, rgb(0, 0, 0));border-bottom-left-radius:5px;border-bottom-right-radius:5px;border-top-left-radius:5px;border-top-right-radius:5px">
-                        <div class="framer-hg8c2v" data-framer-component-type="RichTextContainer" style="--extracted-r6o4lv:var(--variable-reference-KS1OTpe12-V4XApcPH4);--framer-link-text-color:rgb(0, 153, 255);--framer-link-text-decoration:underline;--variable-reference-KS1OTpe12-V4XApcPH4:var(--token-962dbf23-cea4-4b3f-b44d-d5595ab68b22, rgb(255, 255, 255));filter:none;-webkit-filter:none;transform:none">
-                          <p class="framer-text framer-styles-preset-1tukh9k" data-styles-preset="jDHitzL9y" dir="auto" style="--framer-text-color:var(--extracted-r6o4lv, var(--variable-reference-KS1OTpe12-V4XApcPH4))">
-                            See the work
-                          </p>
-                        </div>
-                        <div class="framer-1at294g" data-framer-name="Icon-box" style="background-color:var(--token-06856072-b723-433b-af66-5e2af035f2ef, rgb(255, 33, 33));border-bottom-left-radius:5px;border-bottom-right-radius:5px;border-top-left-radius:5px;border-top-right-radius:5px">
-                          <div class="framer-1w72qz8" data-framer-name="Overlay" style="background-color:var(--token-962dbf23-cea4-4b3f-b44d-d5595ab68b22, rgb(255, 255, 255))">
-                          </div>
-                          <div class="framer-1K87s framer-1e5wxu" style="--43q7um:var(--token-962dbf23-cea4-4b3f-b44d-d5595ab68b22, rgb(255, 255, 255));transform:translate(-50%, -50%)">
-                          </div>
-                          <div class="framer-1K87s framer-gq0wdq" style="--43q7um:var(--token-962dbf23-cea4-4b3f-b44d-d5595ab68b22, rgb(255, 255, 255));transform:translateX(-50%) rotate(-45deg)">
-                          </div>
-                        </div>
-                      </a>
-                      <!--/$-->
-                    </div>
-                  </div>
-                  <!--/$-->
-                </div>
-              </div>
-              <div class="framer-1ipn2b3" data-framer-name="Card-three" style="will-change:transform;opacity:0;transform:translateY(100px)">
-                <div class="framer-o498xg" data-framer-name="Comment">
-                  <div class="framer-18480fo" data-framer-name="Quote" style="height:auto;aspect-ratio:1.2222222222222223">
-                    <div style="position:absolute;border-radius:inherit;corner-shape:inherit;top:0;right:0;bottom:0;left:0" data-framer-background-image-wrapper="true">
-                      <img decoding="async" loading="lazy" width="44" height="36" src="./assets/images/QR9pYmmRdzQ2rZzHGt3gO8AII.svg!height=36&width=44?width=44&amp;height=36" alt="icon" style="display:block;width:100%;height:100%;border-radius:inherit;corner-shape:inherit;object-position:center;object-fit:cover">
-                    </div>
-                  </div>
-                  <div class="framer-137cps7" data-framer-component-type="RichTextContainer" style="transform:none">
-                    <h6 class="framer-text framer-styles-preset-1litcpx" data-styles-preset="kyo9an03l" dir="auto" style="--framer-text-color:var(--token-962dbf23-cea4-4b3f-b44d-d5595ab68b22, rgb(255, 255, 255))">
-                      “Want something like this? I’m always happy to talk through an idea, even if it’s still half-formed.”
-                    </h6>
-                  </div>
-                </div>
-                <div class="framer-6ps0gp" data-framer-name="Info">
-                  <div class="framer-mbefw6" data-framer-name="Avatar" style="height:auto;aspect-ratio:1">
-                    <div style="position:absolute;border-radius:inherit;corner-shape:inherit;top:0;right:0;bottom:0;left:0" data-framer-background-image-wrapper="true">
-                      <img decoding="async" loading="lazy" width="184" height="184" src="./assets/images/jnsHrq8oNBeDhpdEvSHXrG3nhRQ.png!height=184&width=184?width=184&amp;height=184" alt="avatar" style="display:block;width:100%;height:100%;border-radius:inherit;corner-shape:inherit;object-position:center;object-fit:cover">
-                    </div>
-                  </div>
-                  <div class="framer-dw15zp" data-framer-component-type="RichTextContainer" style="transform:none">
-                    <p class="framer-text framer-styles-preset-3fyugt" data-styles-preset="iFFcEKQM3" dir="auto" style="--framer-text-color:var(--token-962dbf23-cea4-4b3f-b44d-d5595ab68b22, rgb(255, 255, 255))">
-                      — Arhan Arif, Web Developer
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <div class="framer-20ilum" data-framer-name="Cards"><div class="tsa" data-framer-name="Testimonial"><div class="tsa__mark"><img src="/assets/projects/velio-labs-logo.webp" alt="Velio Labs logo" width="1542" height="848" loading="lazy" decoding="async"></div><p class="tsa__label">Client</p><blockquote class="tsa__quote">“Honestly, Arhaan is my guy! He did an amazing job designing my website and really understood the vision I had for my SaaS and motion design service. The whole process was smooth, and the final result came out even better than I expected. If you’re looking for someone who’s creative, reliable, and genuinely cares about the work, I would definitely recommend Arhaan. You won’t regret working with him!”</blockquote><div class="tsa__foot"><p class="tsa__by">Client — Velio Labs</p><a class="tsa__cta" href="https://www.veliolabs.site/" target="_blank" rel="noopener noreferrer">VIEW THE WORK <span class="tsa__arrow" aria-hidden="true">→</span></a></div></div></div>
           </div>
         </section>
         <div class="ssr-variant hidden-mvqjwy hidden-16hfden">
@@ -7168,6 +7074,21 @@
         document.addEventListener('DOMContentLoaded', fix);
         var timer = setInterval(fix, 600);
         setTimeout(function () { clearInterval(timer); fix(); }, 9000);
+      })();
+    </script>
+      <script id="testimonial-reveal">
+      (function () {
+        var blocks = document.querySelectorAll('.tsa');
+        if (!blocks.length) return;
+        function showAll() { blocks.forEach(function (b) { b.classList.add('in'); }); }
+        if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) { showAll(); return; }
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) { entry.target.classList.add('in'); io.unobserve(entry.target); }
+          });
+        }, { threshold: 0.18 });
+        blocks.forEach(function (b) { io.observe(b); });
+        setTimeout(showAll, 4000);
       })();
     </script>
   </body>
