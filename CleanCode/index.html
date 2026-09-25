@@ -375,12 +375,13 @@
       .framer-NWrst .tsa__cta:focus-visible { outline: 2px solid #ff2121; outline-offset: 4px; border-radius: 4px; }
       .framer-NWrst .tsa__arrow { display: inline-block; font-size: 14px; line-height: 1; transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1); }
       .framer-NWrst .tsa__cta:hover .tsa__arrow { transform: translateX(6px); }
+      @keyframes tsaIn { from { transform: translateY(20px); } to { transform: none; } }
       @media (prefers-reduced-motion: no-preference) {
-        .framer-NWrst .tsa__mark, .framer-NWrst .tsa__label, .framer-NWrst .tsa__quote, .framer-NWrst .tsa__foot { opacity: 0; transform: translateY(18px); transition: opacity 0.9s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1); }
-        .framer-NWrst .tsa.in .tsa__mark { opacity: 1; transform: none; transition-delay: 0.04s; }
-        .framer-NWrst .tsa.in .tsa__label { opacity: 1; transform: none; transition-delay: 0.1s; }
-        .framer-NWrst .tsa.in .tsa__quote { opacity: 1; transform: none; transition-delay: 0.16s; }
-        .framer-NWrst .tsa.in .tsa__foot { opacity: 1; transform: none; transition-delay: 0.28s; }
+        .framer-NWrst .tsa__mark, .framer-NWrst .tsa__label, .framer-NWrst .tsa__quote, .framer-NWrst .tsa__foot { opacity: 1 !important; }
+      .framer-NWrst .tsa.in .tsa__mark { animation: tsaIn 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+        .framer-NWrst .tsa.in .tsa__label { animation: tsaIn 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) 0.1s both; }
+        .framer-NWrst .tsa.in .tsa__quote { animation: tsaIn 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) 0.16s both; }
+        .framer-NWrst .tsa.in .tsa__foot { animation: tsaIn 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) 0.28s both; }
       }
       @media (max-width: 720px) {
         .framer-NWrst .tsa { grid-template-columns: minmax(0, 1fr); row-gap: 18px; padding: 26px 22px 28px; }
@@ -7078,17 +7079,30 @@
     </script>
       <script id="testimonial-reveal">
       (function () {
-        var blocks = document.querySelectorAll('.tsa');
-        if (!blocks.length) return;
-        function showAll() { blocks.forEach(function (b) { b.classList.add('in'); }); }
-        if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) { showAll(); return; }
+        if (!('IntersectionObserver' in window)) return;
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        var seen = [];
+        function showAll() {
+          var nodes = document.querySelectorAll('.tsa');
+          for (var i = 0; i < nodes.length; i++) nodes[i].classList.add('in');
+        }
         var io = new IntersectionObserver(function (entries) {
           entries.forEach(function (entry) {
             if (entry.isIntersecting) { entry.target.classList.add('in'); io.unobserve(entry.target); }
           });
-        }, { threshold: 0.18 });
-        blocks.forEach(function (b) { io.observe(b); });
-        setTimeout(showAll, 4000);
+        }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+        function watch() {
+          var nodes = document.querySelectorAll('.tsa');
+          for (var i = 0; i < nodes.length; i++) {
+            if (seen.indexOf(nodes[i]) === -1) { seen.push(nodes[i]); io.observe(nodes[i]); }
+          }
+        }
+        watch();
+        var poll = setInterval(watch, 500);
+        setTimeout(function () { clearInterval(poll); }, 9000);
+        setTimeout(showAll, 3000);
+        setTimeout(showAll, 7000);
+        window.addEventListener('load', function () { watch(); setTimeout(showAll, 1200); });
       })();
     </script>
   </body>
