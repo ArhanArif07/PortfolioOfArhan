@@ -7467,9 +7467,9 @@ e(() => {
                                           },
                                           children: `*`,
                                         }),
-                                        'BUILT WITH PRECISION',
+                                        'IDEAS INTO',
                                         m(`br`, {}),
-                                        'DESIGNED TO LAST',
+                                        'INTERACTION',
                                         m(`span`, {
                                           style: {
                                             "--framer-text-color": `var(--token-06856072-b723-433b-af66-5e2af035f2ef, rgb(255, 33, 33))`,
