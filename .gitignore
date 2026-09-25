@@ -1,4 +1,18 @@
 Thumbs.db
 .DS_Store
 desktop.ini
+
+# credentials from the Framer API capture — never publish these
 extracted/api.framer.com/auth/
+
+# local scratch: not part of the published site
+arhanportfolio.har
+inspect_har.js
+inspect_har2.js
+extracted/
+works/
+temp_helpers/
+CONTINUE.md
+STATUS.md
+__pycache__/
+*.pyc
