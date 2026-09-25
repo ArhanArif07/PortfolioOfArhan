@@ -120,6 +120,16 @@ html.lenis,html.lenis body{height:auto}
 .marquee-track i{font-style:normal;color:var(--accent);font-size:0.6em}
 .cursor-dot{position:fixed;width:10px;height:10px;border-radius:50%;background:var(--ink);pointer-events:none;z-index:70;transform:translate(-50%,-50%);opacity:0;transition:opacity 0.3s ease,transform 0.3s ease}
 html.gsap.has-cursor .cursor-dot{opacity:1}
+.back-btn{position:fixed;left:22px;bottom:22px;z-index:65;display:inline-flex;align-items:center;gap:10px;padding:11px 18px 11px 14px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,0.86);backdrop-filter:blur(12px);box-shadow:0 10px 30px rgba(20,20,20,0.08);opacity:0;transform:translateY(18px);pointer-events:none;transition:opacity 0.45s ease,transform 0.45s cubic-bezier(0.2,0.7,0.2,1),background 0.3s ease,color 0.3s ease,border-color 0.3s ease}
+.back-btn.show{opacity:1;transform:translateY(0);pointer-events:auto}
+.back-btn:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.back-btn:hover .mono{color:rgba(255,255,255,0.75)}
+.back-btn .arrow{display:inline-block;font-size:16px;line-height:1;transition:transform 0.4s cubic-bezier(0.2,0.7,0.2,1)}
+.back-btn:hover .arrow{transform:translateX(-5px)}
+.back-btn:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+html.no-anim .back-btn{opacity:1;transform:none;pointer-events:auto}
+@media(max-width:720px){.back-btn{left:14px;bottom:14px;padding:10px 15px 10px 12px}}
+@media(hover:none){.back-btn .mono{display:none}.back-btn{padding:12px}}
 @media(hover:hover) and (pointer:fine){html.gsap.has-cursor .row:hover ~ .cursor-dot,html.gsap.has-cursor .cursor-dot.on{transform:translate(-50%,-50%) scale(2.4)}}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}*{scroll-behavior:auto!important}}
 </style>
@@ -127,6 +137,7 @@ html.gsap.has-cursor .cursor-dot{opacity:1}
 <body>
 <div class="progress"></div>
 <div class="cursor-dot" aria-hidden="true"></div>
+<a class="back-btn" href="/" data-back aria-label="Go back to the previous page"><span class="arrow" aria-hidden="true">←</span><span class="mono">Back</span></a>
 <header class="nav">
   <div class="wrap nav-in">
     <a class="brand" href="/"><img src="/assets/logo.webp" alt="Arhan Arif logo" width="26" height="26" decoding="async">ARHAN ARIF</a>
@@ -341,6 +352,16 @@ window.addEventListener('DOMContentLoaded',function(){
     });
   });
 
+  var back=document.querySelector('.back-btn');
+  if(back){
+    ScrollTrigger.create({start:'top -80',end:'max',onToggle:function(self){back.classList.toggle('show',self.isActive);}});
+    back.addEventListener('click',function(event){
+      var referrer=document.referrer||'';
+      var sameOrigin=referrer.indexOf(location.origin)===0;
+      if(history.length>1&&sameOrigin){event.preventDefault();history.back();}
+    });
+  }
+
   window.addEventListener('load',function(){ScrollTrigger.refresh();});
   root.setAttribute('data-anim','gsap-lenis');
 })();
@@ -354,6 +375,9 @@ window.addEventListener('DOMContentLoaded',function(){
     root.classList.add('no-anim');
     var io=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:0.1});
     document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+    var backNode=document.querySelector('.back-btn');
+    if(backNode){backNode.classList.add('show');}
+    window.addEventListener('scroll',function(){if(backNode){backNode.classList.toggle('show',window.scrollY>80);}},{passive:true});
     setTimeout(function(){document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');});},1200);
   },900);
 });
