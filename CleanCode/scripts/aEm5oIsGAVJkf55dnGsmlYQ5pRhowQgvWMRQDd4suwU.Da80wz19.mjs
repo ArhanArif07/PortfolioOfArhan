@@ -7467,9 +7467,9 @@ e(() => {
                                           },
                                           children: `*`,
                                         }),
-                                        'THE WEB',
+                                        'BUILT WITH PRECISION',
                                         m(`br`, {}),
-                                        'BUILT RIGHT',
+                                        'DESIGNED TO LAST',
                                         m(`span`, {
                                           style: {
                                             "--framer-text-color": `var(--token-06856072-b723-433b-af66-5e2af035f2ef, rgb(255, 33, 33))`,
@@ -7512,7 +7512,7 @@ e(() => {
                                         style: {
                                           "--framer-text-background-padding": `0px 0px 0px 32px`,
                                         },
-                                        children: `I design and build fast, thoughtful websites that look sharp, feel effortless, and give ideas a place to live.`,
+                                        children: `I build websites from the first idea to the final interaction, bringing together bold visual design, clean development, smooth motion, and the small details that separate something functional from something memorable.`,
                                       }),
                                     }),
                                   }),
